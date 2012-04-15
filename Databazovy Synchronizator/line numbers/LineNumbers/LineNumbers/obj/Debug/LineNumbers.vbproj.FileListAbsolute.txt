@@ -1,0 +1,11 @@
+d:\moje veci\skola\diplomka nova\Databazovy Synchronizator\Databazovy Synchronizator\line numbers\LineNumbers\LineNumbers\bin\Debug\LineNumbers.exe
+d:\moje veci\skola\diplomka nova\Databazovy Synchronizator\Databazovy Synchronizator\line numbers\LineNumbers\LineNumbers\bin\Debug\LineNumbers.pdb
+d:\moje veci\skola\diplomka nova\Databazovy Synchronizator\Databazovy Synchronizator\line numbers\LineNumbers\LineNumbers\bin\Debug\LineNumbers.xml
+d:\moje veci\skola\diplomka nova\Databazovy Synchronizator\Databazovy Synchronizator\line numbers\LineNumbers\LineNumbers\obj\Debug\ResolveAssemblyReference.cache
+d:\moje veci\skola\diplomka nova\Databazovy Synchronizator\Databazovy Synchronizator\line numbers\LineNumbers\LineNumbers\obj\Debug\LineNumbers.Form1.resources
+d:\moje veci\skola\diplomka nova\Databazovy Synchronizator\Databazovy Synchronizator\line numbers\LineNumbers\LineNumbers\obj\Debug\LineNumbers.Resources.resources
+d:\moje veci\skola\diplomka nova\Databazovy Synchronizator\Databazovy Synchronizator\line numbers\LineNumbers\LineNumbers\obj\Debug\ResGen.read.1.tlog
+d:\moje veci\skola\diplomka nova\Databazovy Synchronizator\Databazovy Synchronizator\line numbers\LineNumbers\LineNumbers\obj\Debug\ResGen.write.1.tlog
+d:\moje veci\skola\diplomka nova\Databazovy Synchronizator\Databazovy Synchronizator\line numbers\LineNumbers\LineNumbers\obj\Debug\LineNumbers.exe
+d:\moje veci\skola\diplomka nova\Databazovy Synchronizator\Databazovy Synchronizator\line numbers\LineNumbers\LineNumbers\obj\Debug\LineNumbers.xml
+d:\moje veci\skola\diplomka nova\Databazovy Synchronizator\Databazovy Synchronizator\line numbers\LineNumbers\LineNumbers\obj\Debug\LineNumbers.pdb

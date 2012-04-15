@@ -1,0 +1,8 @@
+d:\moje veci\skola\diplomka nova\ListViewEmbeddedControls\bin\Debug\ListViewEmbeddedControls.exe
+d:\moje veci\skola\diplomka nova\ListViewEmbeddedControls\bin\Debug\ListViewEmbeddedControls.pdb
+d:\moje veci\skola\diplomka nova\ListViewEmbeddedControls\obj\Debug\ResolveAssemblyReference.cache
+d:\moje veci\skola\diplomka nova\ListViewEmbeddedControls\obj\Debug\ListViewEmbeddedControls.Form1.resources
+d:\moje veci\skola\diplomka nova\ListViewEmbeddedControls\obj\Debug\ResGen.read.1.tlog
+d:\moje veci\skola\diplomka nova\ListViewEmbeddedControls\obj\Debug\ResGen.write.1.tlog
+d:\moje veci\skola\diplomka nova\ListViewEmbeddedControls\obj\Debug\ListViewEmbeddedControls.exe
+d:\moje veci\skola\diplomka nova\ListViewEmbeddedControls\obj\Debug\ListViewEmbeddedControls.pdb
