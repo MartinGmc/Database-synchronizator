@@ -717,12 +717,12 @@ namespace Databazovy_Synchronizator
 			if (settings.ComparisonMethod == ComparatorSettings.LeftRight )
 			{
 				//missing objects
-                foreach (DbSyncColumnDiff col in tabIn.ColumnsDifferent)
-                {
-                    output.AddRange(db1.prip.alterColumn(tabIn.getTabB(), col.getColumnA()));
-                }
-                
-                foreach (Trigger trg in tabIn.TriggersMissingDb2)
+				foreach (DbSyncColumnDiff col in tabIn.ColumnsDifferent)
+				{
+					output.AddRange(db1.prip.alterColumn(tabIn.getTabB(), col.getColumnA()));
+				}
+				
+				foreach (Trigger trg in tabIn.TriggersMissingDb2)
 				{
 					output.AddRange(db1.prip.addTrigger(tabIn.getTabB(), trg));
 				}
@@ -738,10 +738,10 @@ namespace Databazovy_Synchronizator
 				{
 					output.AddRange(db1.prip.addConstraint(tabIn.getTabB(), con));
 				}
-                foreach (Key keyy in tabIn.KeysMissingDb2)
-                {
-                    output.AddRange(db1.prip.addKey(tabIn.getTabB(), keyy));
-                }
+				foreach (Key keyy in tabIn.KeysMissingDb2)
+				{
+					output.AddRange(db1.prip.addKey(tabIn.getTabB(), keyy));
+				}
 				//objects to rewrite
 				foreach (DbSyncIndexDiff ind in tabIn.IndexesDifferent)
 				{
@@ -771,11 +771,11 @@ namespace Databazovy_Synchronizator
 			{
 				//missing objects
 
-                foreach (DbSyncColumnDiff col in tabIn.ColumnsDifferent)
-                {
-                    output.AddRange(db1.prip.alterColumn(tabIn.getTabB(), col.getColumnA()));
-                }
-                foreach (Trigger trg in tabIn.TriggersMissingDb2)
+				foreach (DbSyncColumnDiff col in tabIn.ColumnsDifferent)
+				{
+					output.AddRange(db1.prip.alterColumn(tabIn.getTabB(), col.getColumnA()));
+				}
+				foreach (Trigger trg in tabIn.TriggersMissingDb2)
 				{
 					output.AddRange(db1.prip.addTrigger(tabIn.getTabB(), trg));
 				}
@@ -791,10 +791,10 @@ namespace Databazovy_Synchronizator
 				{
 					output.AddRange(db1.prip.addConstraint(tabIn.getTabB(), con));
 				}
-                foreach (Key keyy in tabIn.KeysMissingDb2)
-                {
-                    output.AddRange(db1.prip.addKey(tabIn.getTabB(), keyy));
-                }
+				foreach (Key keyy in tabIn.KeysMissingDb2)
+				{
+					output.AddRange(db1.prip.addKey(tabIn.getTabB(), keyy));
+				}
 				//objects to delete
 				foreach (Index ind in tabIn.IndexesMissingDb1)
 				{
@@ -847,10 +847,10 @@ namespace Databazovy_Synchronizator
 			if (settings.ComparisonMethod == ComparatorSettings.RightLeft )
 			{
 				//missing objects
-                foreach (DbSyncColumnDiff col in tabIn.ColumnsDifferent)
-                {
-                    output.AddRange(db1.prip.alterColumn(tabIn.getTabA(), col.getColumnB()));
-                }
+				foreach (DbSyncColumnDiff col in tabIn.ColumnsDifferent)
+				{
+					output.AddRange(db1.prip.alterColumn(tabIn.getTabA(), col.getColumnB()));
+				}
 				foreach (Trigger trg in tabIn.TriggersMissingDb1)
 				{
 					output.AddRange(db1.prip.addTrigger(tabIn.getTabA(), trg));
@@ -867,10 +867,10 @@ namespace Databazovy_Synchronizator
 				{
 					output.AddRange(db1.prip.addConstraint(tabIn.getTabA(), con));
 				}
-                foreach (Key keyy in tabIn.KeysMissingDb1)
-                {
-                    output.AddRange(db1.prip.addKey(tabIn.getTabA(), keyy));
-                }
+				foreach (Key keyy in tabIn.KeysMissingDb1)
+				{
+					output.AddRange(db1.prip.addKey(tabIn.getTabA(), keyy));
+				}
 				//objects to rewrite
 				foreach (DbSyncIndexDiff ind in tabIn.IndexesDifferent)
 				{
@@ -899,10 +899,10 @@ namespace Databazovy_Synchronizator
 			if (settings.ComparisonMethod == ComparatorSettings.RightLeftDel)
 			{
 				//missing objects
-                foreach (DbSyncColumnDiff col in tabIn.ColumnsDifferent)
-                {
-                    output.AddRange(db1.prip.alterColumn(tabIn.getTabA(), col.getColumnB()));
-                }
+				foreach (DbSyncColumnDiff col in tabIn.ColumnsDifferent)
+				{
+					output.AddRange(db1.prip.alterColumn(tabIn.getTabA(), col.getColumnB()));
+				}
 				foreach (Trigger trg in tabIn.TriggersMissingDb1)
 				{
 					output.AddRange(db1.prip.addTrigger(tabIn.getTabA(), trg));
@@ -919,10 +919,10 @@ namespace Databazovy_Synchronizator
 				{
 					output.AddRange(db1.prip.addConstraint(tabIn.getTabA(), con));
 				}
-                foreach (Key keyy in tabIn.KeysMissingDb1)
-                {
-                    output.AddRange(db1.prip.addKey(tabIn.getTabA(), keyy));
-                }
+				foreach (Key keyy in tabIn.KeysMissingDb1)
+				{
+					output.AddRange(db1.prip.addKey(tabIn.getTabA(), keyy));
+				}
 				//objects to delete
 				foreach (Index ind in tabIn.IndexesMissingDb2)
 				{
@@ -1183,6 +1183,88 @@ namespace Databazovy_Synchronizator
 
 			}
 			//---------------------------------------------END OF RIGHT TO LEFT COMPARISON WHITH DELETING SCRIPTS FOR DB1---------------------------------------------------------------
+			//---------------------------------------------TWO WAY SYNCHRONIZATION---------------------------------------------------------------------------
+			if (settings.ComparisonMethod == ComparatorSettings.TwoWay)
+			{
+				// objects to create
+				if (settings.SyncProcedures)
+				{
+					foreach (SProcedure proc in proceduresMissingInDb1)
+					{
+						output.AddRange(db1.prip.createProcedure(proc));
+					}
+				}
+
+				if (settings.SyncFunctions)
+				{
+					foreach (SFunction funct in functionsMissingInDb1)
+					{
+						output.AddRange(db1.prip.createFunction(funct));
+					}
+				}
+
+				if (settings.SyncTypes)
+				{
+					foreach (Typ typp in typesMissingInDb1)
+					{
+						output.Add(db1.prip.createType(typp));
+					}
+				}
+
+				if (settings.SyncUsers)
+				{
+					foreach (User usr in usersMissingInDb1)
+					{
+						output.AddRange(db1.prip.createUser(usr));
+					}
+				}
+				if (settings.SyncTables)
+				{
+					foreach (Tablee tab in tablesMissingInDb1)
+					{
+						output.AddRange(db1.prip.createTable(tab));
+					}
+				}
+				if (!this.settings.IsDbAPriority)
+				{
+					//objects to rewrite
+					if (settings.SyncProcedures)
+					{
+						foreach (DbSyncStoredProcedureDiff proc in differentProcedures)
+						{
+							SProcedure procc = proc.getProcB();
+							output.AddRange(db1.prip.alterProcedure(procc));
+						}
+					}
+
+					if (settings.SyncFunctions)
+					{
+						foreach (DbSyncFunctionDiff funkc in differentFunctions)
+						{
+							SFunction funkcc = funkc.getFunctionB();
+							output.AddRange(db1.prip.alterFunction(funkcc));
+						}
+					}
+
+					if (settings.SyncTables)
+					{
+						output.AddRange(addMissingColumnsToTables(differentTables));
+						foreach (DbSyncTableDiff tab in differentTables)
+						{
+							output.AddRange(syncTable(tab));
+						}
+					}
+					if (settings.SyncTypes)
+					{
+						foreach (DbSyncTypeDiff tt in differentTypes)
+						{
+							output.AddRange(db1.prip.alterType(tt.getTypeB()));
+						}
+
+					}
+				}
+			}
+			//---------------------------------------------TWO WAY SYNCHRONIZATION---------------------------------------------------------------------------
 			return output;
 		}
 
@@ -1270,7 +1352,7 @@ namespace Databazovy_Synchronizator
 			}
 			//--------------------------------------------------------END OF LEFT TO RIGHT COMPARISON FOR DB2------------------------------------------------------------
 			//--------------------------------------------------------LEFT TO RIGHT COMPARISON WHITH DELETING SCRIPTS FOR DB2---------------------------------------------------------------
-						if (settings.ComparisonMethod == ComparatorSettings.LeftRightDel)
+			if (settings.ComparisonMethod == ComparatorSettings.LeftRightDel)
 			{
 				// objects to create
 				if (settings.SyncProcedures)
@@ -1385,9 +1467,91 @@ namespace Databazovy_Synchronizator
 						output.AddRange(db2.prip.removeType(t));
 					}
 				}
-				//---------------------------------------------------END OF LEFT TO RIGHT COMPARISON WHITH DELETING SCRIPTS FOR DB2---------------------------------------------------------------
-
 			}
+				//---------------------------------------------------END OF LEFT TO RIGHT COMPARISON WHITH DELETING SCRIPTS FOR DB2---------------------------------------------------------------
+				//---------------------------------------------------TWO WAY SYNC-----------------------------------------------------------------------------------------------------------------
+				// objects to create
+				if (settings.ComparisonMethod == ComparatorSettings.TwoWay)
+				{
+					if (settings.SyncProcedures)
+					{
+						foreach (SProcedure proc in proceduresMissingInDb2)
+						{
+							output.AddRange(db2.prip.createProcedure(proc));
+						}
+					}
+
+					if (settings.SyncFunctions)
+					{
+						foreach (SFunction funct in functionsMissingInDb2)
+						{
+							output.AddRange(db2.prip.createFunction(funct));
+						}
+					}
+
+					if (settings.SyncTypes)
+					{
+						foreach (Typ typp in typesMissingInDb2)
+						{
+							output.Add(db2.prip.createType(typp));
+						}
+					}
+
+					if (settings.SyncUsers)
+					{
+						foreach (User usr in usersMissingInDb2)
+						{
+							output.AddRange(db2.prip.createUser(usr));
+						}
+					}
+					if (settings.SyncTables)
+					{
+
+						foreach (Tablee tab in tablesMissingInDb2)
+						{
+							output.AddRange(db2.prip.createTable(tab));
+						}
+					}
+
+					if (this.settings.IsDbAPriority)
+					{
+						if (settings.SyncProcedures)
+						{
+							foreach (DbSyncStoredProcedureDiff proc in differentProcedures)
+							{
+								SProcedure procc = proc.getProcA();
+								output.AddRange(db1.prip.alterProcedure(procc));
+							}
+						}
+
+						if (settings.SyncFunctions)
+						{
+							foreach (DbSyncFunctionDiff funkc in differentFunctions)
+							{
+								SFunction funkcc = funkc.getFunctionA();
+								output.AddRange(db1.prip.alterFunction(funkcc));
+							}
+						}
+						if (settings.SyncTables)
+						{
+							output.AddRange(addMissingColumnsToTables(differentTables));
+							foreach (DbSyncTableDiff tab in differentTables)
+							{
+								output.AddRange(syncTable(tab));
+							}
+						}
+						if (settings.SyncTypes)
+						{
+							foreach (DbSyncTypeDiff tt in differentTypes)
+							{
+								output.AddRange(db1.prip.alterType(tt.getTypeA()));
+							}
+
+						}
+					}
+				}
+				//---------------------------------------------------END OF TWO WAY SYNC
+			
 
 			return output;
 		}
@@ -1421,201 +1585,201 @@ namespace Databazovy_Synchronizator
 							while (red1.Read())
 							{
 								bool differentExist = false;
-                                bool differentNotExist = false;
-                                List<ColVal> cvlist = new List<ColVal>();
-                                string key = red1[kk.NameOfColumns[0]].ToString();
-                                DbDataReader red2 = db2.prip.getReaderOfTable(tab.getTableName(), kk.NameOfColumns[0], key);
-                                if (red2.Read())
-                                {
+								bool differentNotExist = false;
+								List<ColVal> cvlist = new List<ColVal>();
+								string key = red1[kk.NameOfColumns[0]].ToString();
+								DbDataReader red2 = db2.prip.getReaderOfTable(tab.getTableName(), kk.NameOfColumns[0], key);
+								if (red2.Read())
+								{
 
-                                    foreach (Columnn col in tab.getTabA().Stlpce)
-                                    {
-                                        cvlist.Add(new ColVal(col.COULUMN_NAME1,red1[col.COULUMN_NAME1].ToString()));
-                                        if (red1[col.COULUMN_NAME1].ToString() != red2[col.COULUMN_NAME1].ToString())
-                                        {
-                                            differentExist = true;
-                                            
-                                        }
-                                    }
-                                }
-                                   
-                                else differentNotExist = true;
-                                red2.Close();
-                                if (differentExist)
-                                {
-                                    output.Add(db2.prip.updateRow(tab.getTableName(), cvlist, new ColVal(kk.NameOfColumns[0], key)));
-                                }
-                                if (differentNotExist)
-                                {
-                                    foreach (Columnn col in tab.getTabA().Stlpce)
-	                                {
-		                                 cvlist.Add(new ColVal(col.COULUMN_NAME1,red1[col.COULUMN_NAME1].ToString()));    
-	                                }
-                                    output.Add(db2.prip.insertRow(tab.getTableName(), cvlist));
-                                }
+									foreach (Columnn col in tab.getTabA().Stlpce)
+									{
+										cvlist.Add(new ColVal(col.COULUMN_NAME1,red1[col.COULUMN_NAME1].ToString()));
+										if (red1[col.COULUMN_NAME1].ToString() != red2[col.COULUMN_NAME1].ToString())
+										{
+											differentExist = true;
+											
+										}
+									}
+								}
+								   
+								else differentNotExist = true;
+								red2.Close();
+								if (differentExist)
+								{
+									output.Add(db2.prip.updateRow(tab.getTableName(), cvlist, new ColVal(kk.NameOfColumns[0], key)));
+								}
+								if (differentNotExist)
+								{
+									foreach (Columnn col in tab.getTabA().Stlpce)
+									{
+										 cvlist.Add(new ColVal(col.COULUMN_NAME1,red1[col.COULUMN_NAME1].ToString()));    
+									}
+									output.Add(db2.prip.insertRow(tab.getTableName(), cvlist));
+								}
 
 							}
-                            red1.Close();
+							red1.Close();
 						}
-                        if (this.settings.ComparisonMethod == ComparatorSettings.LeftRightDel)
-                        {
-                            DbDataReader red1 = db1.prip.getReaderOfTable(tab.getTableName(), "", "");
-                            while (red1.Read())
-                            {
-                                bool differentExist = false;
-                                bool differentNotExist = false;
-                                List<ColVal> cvlist = new List<ColVal>();
-                                string key = red1[kk.NameOfColumns[0]].ToString();
-                                DbDataReader red2 = db2.prip.getReaderOfTable(tab.getTableName(), kk.NameOfColumns[0], key);
-                                if (red2.Read())
-                                {
+						if (this.settings.ComparisonMethod == ComparatorSettings.LeftRightDel)
+						{
+							DbDataReader red1 = db1.prip.getReaderOfTable(tab.getTableName(), "", "");
+							while (red1.Read())
+							{
+								bool differentExist = false;
+								bool differentNotExist = false;
+								List<ColVal> cvlist = new List<ColVal>();
+								string key = red1[kk.NameOfColumns[0]].ToString();
+								DbDataReader red2 = db2.prip.getReaderOfTable(tab.getTableName(), kk.NameOfColumns[0], key);
+								if (red2.Read())
+								{
 
-                                    foreach (Columnn col in tab.getTabA().Stlpce)
-                                    {
-                                        cvlist.Add(new ColVal(col.COULUMN_NAME1, red1[col.COULUMN_NAME1].ToString()));
-                                        if (red1[col.COULUMN_NAME1].ToString() != red2[col.COULUMN_NAME1].ToString())
-                                        {
-                                            differentExist = true;
+									foreach (Columnn col in tab.getTabA().Stlpce)
+									{
+										cvlist.Add(new ColVal(col.COULUMN_NAME1, red1[col.COULUMN_NAME1].ToString()));
+										if (red1[col.COULUMN_NAME1].ToString() != red2[col.COULUMN_NAME1].ToString())
+										{
+											differentExist = true;
 
-                                        }
-                                    }
-                                }
-                                else differentNotExist = true;
-                                red2.Close();
-                                if (differentExist)
-                                {
-                                    output.Add(db2.prip.updateRow(tab.getTableName(), cvlist, new ColVal(kk.NameOfColumns[0], key)));
-                                }
-                                if (differentNotExist)
-                                {
-                                    foreach (Columnn col in tab.getTabA().Stlpce)
-                                    {
-                                        cvlist.Add(new ColVal(col.COULUMN_NAME1, red1[col.COULUMN_NAME1].ToString()));
-                                    }
-                                    output.Add(db2.prip.insertRow(tab.getTableName(), cvlist));
-                                }
-                            }
-                            red1.Close();
-                            red1 = db2.prip.getReaderOfTable(tab.getTableName(), "", "");
-                            while (red1.Read())
-                            {
-                                bool differentExist = false;
-                                bool differentNotExist = false;
-                                List<ColVal> cvlist = new List<ColVal>();
-                                string key = red1[kk.NameOfColumns[0]].ToString();
-                                DbDataReader red2 = db1.prip.getReaderOfTable(tab.getTableName(), kk.NameOfColumns[0], key);
-                                if (red2.Read())
-                                {
+										}
+									}
+								}
+								else differentNotExist = true;
+								red2.Close();
+								if (differentExist)
+								{
+									output.Add(db2.prip.updateRow(tab.getTableName(), cvlist, new ColVal(kk.NameOfColumns[0], key)));
+								}
+								if (differentNotExist)
+								{
+									foreach (Columnn col in tab.getTabA().Stlpce)
+									{
+										cvlist.Add(new ColVal(col.COULUMN_NAME1, red1[col.COULUMN_NAME1].ToString()));
+									}
+									output.Add(db2.prip.insertRow(tab.getTableName(), cvlist));
+								}
+							}
+							red1.Close();
+							red1 = db2.prip.getReaderOfTable(tab.getTableName(), "", "");
+							while (red1.Read())
+							{
+								bool differentExist = false;
+								bool differentNotExist = false;
+								List<ColVal> cvlist = new List<ColVal>();
+								string key = red1[kk.NameOfColumns[0]].ToString();
+								DbDataReader red2 = db1.prip.getReaderOfTable(tab.getTableName(), kk.NameOfColumns[0], key);
+								if (red2.Read())
+								{
 
-                                    foreach (Columnn col in tab.getTabA().Stlpce)
-                                    {
-                                        cvlist.Add(new ColVal(col.COULUMN_NAME1, red1[col.COULUMN_NAME1].ToString()));
-                                        if (red1[col.COULUMN_NAME1].ToString() != red2[col.COULUMN_NAME1].ToString())
-                                        {
-                                            differentExist = true;
+									foreach (Columnn col in tab.getTabA().Stlpce)
+									{
+										cvlist.Add(new ColVal(col.COULUMN_NAME1, red1[col.COULUMN_NAME1].ToString()));
+										if (red1[col.COULUMN_NAME1].ToString() != red2[col.COULUMN_NAME1].ToString())
+										{
+											differentExist = true;
 
-                                        }
-                                    }
-                                }
-                                else differentNotExist = true;
-                                red2.Close();
-                                //if (differentExist)
-                                //{
-                                //    output.Add(db2.prip.updateRow(tab.getTableName(), cvlist, new ColVal(key, red1[key].ToString())));
-                                //}
-                                if (differentNotExist)
-                                {
-                                    output.Add(db2.prip.deleteRow(tab.getTableName(), new ColVal(kk.NameOfColumns[0], key)));
-                                }
-                            }
-                            red1.Close();
-                            //teraz vymazem tie, co tam nemaju byt
+										}
+									}
+								}
+								else differentNotExist = true;
+								red2.Close();
+								//if (differentExist)
+								//{
+								//    output.Add(db2.prip.updateRow(tab.getTableName(), cvlist, new ColVal(key, red1[key].ToString())));
+								//}
+								if (differentNotExist)
+								{
+									output.Add(db2.prip.deleteRow(tab.getTableName(), new ColVal(kk.NameOfColumns[0], key)));
+								}
+							}
+							red1.Close();
+							//teraz vymazem tie, co tam nemaju byt
 
-                        }
+						}
 
-                        if (this.settings.ComparisonMethod == ComparatorSettings.TwoWay)
-                        {
-                            DbDataReader red1 = db2.prip.getReaderOfTable(tab.getTableName(), "", "");
-                            while (red1.Read())
-                            {
-                                bool differentExist = false;
-                                bool differentNotExist = false;
-                                List<ColVal> cvlist1 = new List<ColVal>();
-                                List<ColVal> cvlist2 = new List<ColVal>();
-                                string key = red1[kk.NameOfColumns[0]].ToString();
-                                DbDataReader red2 = db1.prip.getReaderOfTable(tab.getTableName(), kk.NameOfColumns[0], key);
-                                if (red2.Read())
-                                {
+						if (this.settings.ComparisonMethod == ComparatorSettings.TwoWay)
+						{
+							DbDataReader red1 = db2.prip.getReaderOfTable(tab.getTableName(), "", "");
+							while (red1.Read())
+							{
+								bool differentExist = false;
+								bool differentNotExist = false;
+								List<ColVal> cvlist1 = new List<ColVal>();
+								List<ColVal> cvlist2 = new List<ColVal>();
+								string key = red1[kk.NameOfColumns[0]].ToString();
+								DbDataReader red2 = db1.prip.getReaderOfTable(tab.getTableName(), kk.NameOfColumns[0], key);
+								if (red2.Read())
+								{
 
-                                    foreach (Columnn col in tab.getTabA().Stlpce)
-                                    {
-                                        cvlist1.Add(new ColVal(col.COULUMN_NAME1, red1[col.COULUMN_NAME1].ToString()));
-                                        cvlist2.Add(new ColVal(col.COULUMN_NAME1, red2[col.COULUMN_NAME1].ToString()));
-                                        if (red1[col.COULUMN_NAME1].ToString() != red2[col.COULUMN_NAME1].ToString())
-                                        {
-                                            differentExist = true;
+									foreach (Columnn col in tab.getTabA().Stlpce)
+									{
+										cvlist1.Add(new ColVal(col.COULUMN_NAME1, red1[col.COULUMN_NAME1].ToString()));
+										cvlist2.Add(new ColVal(col.COULUMN_NAME1, red2[col.COULUMN_NAME1].ToString()));
+										if (red1[col.COULUMN_NAME1].ToString() != red2[col.COULUMN_NAME1].ToString())
+										{
+											differentExist = true;
 
-                                        }
-                                    }
-                                }
-                                else differentNotExist = true;
-                                red2.Close();
-                                if (differentExist)
-                                {
-                                    if (this.settings.IsDbAPriority)
-                                    {
-                                        output.Add(db2.prip.updateRow(tab.getTableName(), cvlist2, new ColVal(kk.NameOfColumns[0], key)));
-                                    }
-                                   
-                                }
-                                if (differentNotExist)
-                                {
-                                    foreach (Columnn col in tab.getTabA().Stlpce)
-                                    {
-                                       // cvlist1.Add(new ColVal(col.COULUMN_NAME1, red1[col.COULUMN_NAME1].ToString()));
-                                    }
-                                   // output.Add(db1.prip.insertRow(tab.getTableName(), cvlist1));
-                                }
-                            }
-                            red1.Close();
-                            red1 = db1.prip.getReaderOfTable(tab.getTableName(), "", "");
-                            while (red1.Read())
-                            {
-                                bool differentExist = false;
-                                bool differentNotExist = false;
-                                List<ColVal> cvlist = new List<ColVal>();
-                                string key = red1[kk.NameOfColumns[0]].ToString();
-                                DbDataReader red2 = db2.prip.getReaderOfTable(tab.getTableName(), kk.NameOfColumns[0], key);
-                                if (red2.Read())
-                                {
+										}
+									}
+								}
+								else differentNotExist = true;
+								red2.Close();
+								if (differentExist)
+								{
+									if (this.settings.IsDbAPriority)
+									{
+										output.Add(db2.prip.updateRow(tab.getTableName(), cvlist2, new ColVal(kk.NameOfColumns[0], key)));
+									}
+								   
+								}
+								if (differentNotExist)
+								{
+									foreach (Columnn col in tab.getTabA().Stlpce)
+									{
+									   // cvlist1.Add(new ColVal(col.COULUMN_NAME1, red1[col.COULUMN_NAME1].ToString()));
+									}
+								   // output.Add(db1.prip.insertRow(tab.getTableName(), cvlist1));
+								}
+							}
+							red1.Close();
+							red1 = db1.prip.getReaderOfTable(tab.getTableName(), "", "");
+							while (red1.Read())
+							{
+								bool differentExist = false;
+								bool differentNotExist = false;
+								List<ColVal> cvlist = new List<ColVal>();
+								string key = red1[kk.NameOfColumns[0]].ToString();
+								DbDataReader red2 = db2.prip.getReaderOfTable(tab.getTableName(), kk.NameOfColumns[0], key);
+								if (red2.Read())
+								{
 
-                                    foreach (Columnn col in tab.getTabA().Stlpce)
-                                    {
-                                        cvlist.Add(new ColVal(col.COULUMN_NAME1, red1[col.COULUMN_NAME1].ToString()));
-                                        if (red1[col.COULUMN_NAME1].ToString() != red2[col.COULUMN_NAME1].ToString())
-                                        {
-                                            differentExist = true;
+									foreach (Columnn col in tab.getTabA().Stlpce)
+									{
+										cvlist.Add(new ColVal(col.COULUMN_NAME1, red1[col.COULUMN_NAME1].ToString()));
+										if (red1[col.COULUMN_NAME1].ToString() != red2[col.COULUMN_NAME1].ToString())
+										{
+											differentExist = true;
 
-                                        }
-                                    }
-                                }
-                                else differentNotExist = true;
-                                red2.Close();
-                                //if (differentExist)
-                                //{
-                                //    output.Add(db2.prip.updateRow(tab.getTableName(), cvlist, new ColVal(key, red1[key].ToString())));
-                                //}
-                                if (differentNotExist)
-                                {
-                                    foreach (Columnn col in tab.getTabA().Stlpce)
-                                    {
-                                        cvlist.Add(new ColVal(col.COULUMN_NAME1, red1[col.COULUMN_NAME1].ToString()));
-                                    }
-                                    output.Add(db2.prip.insertRow(tab.getTableName(), cvlist));
-                                }
-                            }
-                            red1.Close();
-                        }
+										}
+									}
+								}
+								else differentNotExist = true;
+								red2.Close();
+								//if (differentExist)
+								//{
+								//    output.Add(db2.prip.updateRow(tab.getTableName(), cvlist, new ColVal(key, red1[key].ToString())));
+								//}
+								if (differentNotExist)
+								{
+									foreach (Columnn col in tab.getTabA().Stlpce)
+									{
+										cvlist.Add(new ColVal(col.COULUMN_NAME1, red1[col.COULUMN_NAME1].ToString()));
+									}
+									output.Add(db2.prip.insertRow(tab.getTableName(), cvlist));
+								}
+							}
+							red1.Close();
+						}
 
 					}
 					else throw new Exception("Cannot synchronize data on this table, because there is no primary key or composite primary key");
@@ -1624,241 +1788,241 @@ namespace Databazovy_Synchronizator
 			else
 				throw new Exception("Cannot synchronize data on non synchronized tables, synchronize schema first please");
 			return output;
-            //return null;
+			//return null;
 		}
 	   
 		public List<string> generateDataScriptsForDB1(DbSyncTableDiff tab)
 		{
-            List<string> output = new List<string>();
-            if (!tab.isDifferent())
-            {
-                int havePrimaryKey = 0;
-                bool simplePK = false;
-                Key kk = null;
-                foreach (DbSyncKeyDiff k in tab.KeysDifList())
-                {
-                    if (k.getKeyA().PrimaryKey)
-                    {
-                        havePrimaryKey++;
-                        if (k.getKeyA().NameOfColumns.Count == 1)
-                        {
-                            simplePK = true;
-                            kk = k.getKeyA();
-                        }
-                    }
-                }
+			List<string> output = new List<string>();
+			if (!tab.isDifferent())
+			{
+				int havePrimaryKey = 0;
+				bool simplePK = false;
+				Key kk = null;
+				foreach (DbSyncKeyDiff k in tab.KeysDifList())
+				{
+					if (k.getKeyA().PrimaryKey)
+					{
+						havePrimaryKey++;
+						if (k.getKeyA().NameOfColumns.Count == 1)
+						{
+							simplePK = true;
+							kk = k.getKeyA();
+						}
+					}
+				}
 
-                if ((havePrimaryKey == 1) && simplePK)
-                {
-                    if (this.settings.ComparisonMethod == ComparatorSettings.RightLeft)
-                    {
-                        DbDataReader red1 = db2.prip.getReaderOfTable(tab.getTableName(), "", "");
-                        while (red1.Read())
-                        {
-                            bool differentExist = false;
-                            bool differentNotExist = false;
-                            List<ColVal> cvlist = new List<ColVal>();
-                            string key = red1[kk.NameOfColumns[0]].ToString();
-                            DbDataReader red2 = db1.prip.getReaderOfTable(tab.getTableName(), kk.NameOfColumns[0], key);
-                            if (red2.Read())
-                            {
+				if ((havePrimaryKey == 1) && simplePK)
+				{
+					if (this.settings.ComparisonMethod == ComparatorSettings.RightLeft)
+					{
+						DbDataReader red1 = db2.prip.getReaderOfTable(tab.getTableName(), "", "");
+						while (red1.Read())
+						{
+							bool differentExist = false;
+							bool differentNotExist = false;
+							List<ColVal> cvlist = new List<ColVal>();
+							string key = red1[kk.NameOfColumns[0]].ToString();
+							DbDataReader red2 = db1.prip.getReaderOfTable(tab.getTableName(), kk.NameOfColumns[0], key);
+							if (red2.Read())
+							{
 
-                                foreach (Columnn col in tab.getTabA().Stlpce)
-                                {
-                                    cvlist.Add(new ColVal(col.COULUMN_NAME1, red1[col.COULUMN_NAME1].ToString()));
-                                    if (red1[col.COULUMN_NAME1].ToString() != red2[col.COULUMN_NAME1].ToString())
-                                    {
-                                        differentExist = true;
+								foreach (Columnn col in tab.getTabA().Stlpce)
+								{
+									cvlist.Add(new ColVal(col.COULUMN_NAME1, red1[col.COULUMN_NAME1].ToString()));
+									if (red1[col.COULUMN_NAME1].ToString() != red2[col.COULUMN_NAME1].ToString())
+									{
+										differentExist = true;
 
-                                    }
-                                }
-                            }
+									}
+								}
+							}
 
-                            else differentNotExist = true;
-                            red2.Close();
-                            if (differentExist)
-                            {
-                                output.Add(db1.prip.updateRow(tab.getTableName(), cvlist, new ColVal(kk.NameOfColumns[0], key)));
-                            }
-                            if (differentNotExist)
-                            {
-                                foreach (Columnn col in tab.getTabA().Stlpce)
-                                {
-                                    cvlist.Add(new ColVal(col.COULUMN_NAME1, red1[col.COULUMN_NAME1].ToString()));
-                                }
-                                output.Add(db1.prip.insertRow(tab.getTableName(), cvlist));
-                            }
+							else differentNotExist = true;
+							red2.Close();
+							if (differentExist)
+							{
+								output.Add(db1.prip.updateRow(tab.getTableName(), cvlist, new ColVal(kk.NameOfColumns[0], key)));
+							}
+							if (differentNotExist)
+							{
+								foreach (Columnn col in tab.getTabA().Stlpce)
+								{
+									cvlist.Add(new ColVal(col.COULUMN_NAME1, red1[col.COULUMN_NAME1].ToString()));
+								}
+								output.Add(db1.prip.insertRow(tab.getTableName(), cvlist));
+							}
 
-                        }
-                        red1.Close();
-                    }
-                    if (this.settings.ComparisonMethod == ComparatorSettings.RightLeftDel)
-                    {
-                        DbDataReader red1 = db2.prip.getReaderOfTable(tab.getTableName(), "", "");
-                        while (red1.Read())
-                        {
-                            bool differentExist = false;
-                            bool differentNotExist = false;
-                            List<ColVal> cvlist = new List<ColVal>();
-                            string key = red1[kk.NameOfColumns[0]].ToString();
-                            DbDataReader red2 = db1.prip.getReaderOfTable(tab.getTableName(), kk.NameOfColumns[0], key);
-                            if (red2.Read())
-                            {
+						}
+						red1.Close();
+					}
+					if (this.settings.ComparisonMethod == ComparatorSettings.RightLeftDel)
+					{
+						DbDataReader red1 = db2.prip.getReaderOfTable(tab.getTableName(), "", "");
+						while (red1.Read())
+						{
+							bool differentExist = false;
+							bool differentNotExist = false;
+							List<ColVal> cvlist = new List<ColVal>();
+							string key = red1[kk.NameOfColumns[0]].ToString();
+							DbDataReader red2 = db1.prip.getReaderOfTable(tab.getTableName(), kk.NameOfColumns[0], key);
+							if (red2.Read())
+							{
 
-                                foreach (Columnn col in tab.getTabA().Stlpce)
-                                {
-                                    cvlist.Add(new ColVal(col.COULUMN_NAME1, red1[col.COULUMN_NAME1].ToString()));
-                                    if (red1[col.COULUMN_NAME1].ToString() != red2[col.COULUMN_NAME1].ToString())
-                                    {
-                                        differentExist = true;
+								foreach (Columnn col in tab.getTabA().Stlpce)
+								{
+									cvlist.Add(new ColVal(col.COULUMN_NAME1, red1[col.COULUMN_NAME1].ToString()));
+									if (red1[col.COULUMN_NAME1].ToString() != red2[col.COULUMN_NAME1].ToString())
+									{
+										differentExist = true;
 
-                                    }
-                                }
-                            }
-                            else differentNotExist = true;
-                            red2.Close();
-                            if (differentExist)
-                            {
-                                output.Add(db1.prip.updateRow(tab.getTableName(), cvlist, new ColVal(kk.NameOfColumns[0], key)));
-                            }
-                            if (differentNotExist)
-                            {
-                                foreach (Columnn col in tab.getTabA().Stlpce)
-                                {
-                                    cvlist.Add(new ColVal(col.COULUMN_NAME1, red1[col.COULUMN_NAME1].ToString()));
-                                }
-                                output.Add(db1.prip.insertRow(tab.getTableName(), cvlist));
-                            }
-                        }
-                        red1.Close();
-                        red1 = db1.prip.getReaderOfTable(tab.getTableName(), "", "");
-                        while (red1.Read())
-                        {
-                            bool differentExist = false;
-                            bool differentNotExist = false;
-                            List<ColVal> cvlist = new List<ColVal>();
-                            string key = red1[kk.NameOfColumns[0]].ToString();
-                            DbDataReader red2 = db2.prip.getReaderOfTable(tab.getTableName(), kk.NameOfColumns[0], key);
-                            if (red2.Read())
-                            {
+									}
+								}
+							}
+							else differentNotExist = true;
+							red2.Close();
+							if (differentExist)
+							{
+								output.Add(db1.prip.updateRow(tab.getTableName(), cvlist, new ColVal(kk.NameOfColumns[0], key)));
+							}
+							if (differentNotExist)
+							{
+								foreach (Columnn col in tab.getTabA().Stlpce)
+								{
+									cvlist.Add(new ColVal(col.COULUMN_NAME1, red1[col.COULUMN_NAME1].ToString()));
+								}
+								output.Add(db1.prip.insertRow(tab.getTableName(), cvlist));
+							}
+						}
+						red1.Close();
+						red1 = db1.prip.getReaderOfTable(tab.getTableName(), "", "");
+						while (red1.Read())
+						{
+							bool differentExist = false;
+							bool differentNotExist = false;
+							List<ColVal> cvlist = new List<ColVal>();
+							string key = red1[kk.NameOfColumns[0]].ToString();
+							DbDataReader red2 = db2.prip.getReaderOfTable(tab.getTableName(), kk.NameOfColumns[0], key);
+							if (red2.Read())
+							{
 
-                                foreach (Columnn col in tab.getTabA().Stlpce)
-                                {
-                                    cvlist.Add(new ColVal(col.COULUMN_NAME1, red1[col.COULUMN_NAME1].ToString()));
-                                    if (red1[col.COULUMN_NAME1].ToString() != red2[col.COULUMN_NAME1].ToString())
-                                    {
-                                        differentExist = true;
+								foreach (Columnn col in tab.getTabA().Stlpce)
+								{
+									cvlist.Add(new ColVal(col.COULUMN_NAME1, red1[col.COULUMN_NAME1].ToString()));
+									if (red1[col.COULUMN_NAME1].ToString() != red2[col.COULUMN_NAME1].ToString())
+									{
+										differentExist = true;
 
-                                    }
-                                }
-                            }
-                            else differentNotExist = true;
-                            red2.Close();
-                            //if (differentExist)
-                            //{
-                            //    output.Add(db2.prip.updateRow(tab.getTableName(), cvlist, new ColVal(key, red1[key].ToString())));
-                            //}
-                            if (differentNotExist)
-                            {
-                                output.Add(db1.prip.deleteRow(tab.getTableName(), new ColVal(kk.NameOfColumns[0], key)));
-                            }
-                        }
-                        red1.Close();
-                        //teraz vymazem tie, co tam nemaju byt
+									}
+								}
+							}
+							else differentNotExist = true;
+							red2.Close();
+							//if (differentExist)
+							//{
+							//    output.Add(db2.prip.updateRow(tab.getTableName(), cvlist, new ColVal(key, red1[key].ToString())));
+							//}
+							if (differentNotExist)
+							{
+								output.Add(db1.prip.deleteRow(tab.getTableName(), new ColVal(kk.NameOfColumns[0], key)));
+							}
+						}
+						red1.Close();
+						//teraz vymazem tie, co tam nemaju byt
 
-                    }
-                    if (this.settings.ComparisonMethod == ComparatorSettings.TwoWay)
-                    {
-                        DbDataReader red1 = db2.prip.getReaderOfTable(tab.getTableName(), "", "");
-                        while (red1.Read())
-                        {
-                            bool differentExist = false;
-                            bool differentNotExist = false;
-                            List<ColVal> cvlist1 = new List<ColVal>();
-                            List<ColVal> cvlist2 = new List<ColVal>();
-                            string key = red1[kk.NameOfColumns[0]].ToString();
-                            DbDataReader red2 = db1.prip.getReaderOfTable(tab.getTableName(), kk.NameOfColumns[0], key);
-                            if (red2.Read())
-                            {
+					}
+					if (this.settings.ComparisonMethod == ComparatorSettings.TwoWay)
+					{
+						DbDataReader red1 = db2.prip.getReaderOfTable(tab.getTableName(), "", "");
+						while (red1.Read())
+						{
+							bool differentExist = false;
+							bool differentNotExist = false;
+							List<ColVal> cvlist1 = new List<ColVal>();
+							List<ColVal> cvlist2 = new List<ColVal>();
+							string key = red1[kk.NameOfColumns[0]].ToString();
+							DbDataReader red2 = db1.prip.getReaderOfTable(tab.getTableName(), kk.NameOfColumns[0], key);
+							if (red2.Read())
+							{
 
-                                foreach (Columnn col in tab.getTabA().Stlpce)
-                                {
-                                    cvlist1.Add(new ColVal(col.COULUMN_NAME1, red1[col.COULUMN_NAME1].ToString()));
-                                    cvlist2.Add(new ColVal(col.COULUMN_NAME1, red2[col.COULUMN_NAME1].ToString()));
-                                    if (red1[col.COULUMN_NAME1].ToString() != red2[col.COULUMN_NAME1].ToString())
-                                    {
-                                        differentExist = true;
+								foreach (Columnn col in tab.getTabA().Stlpce)
+								{
+									cvlist1.Add(new ColVal(col.COULUMN_NAME1, red1[col.COULUMN_NAME1].ToString()));
+									cvlist2.Add(new ColVal(col.COULUMN_NAME1, red2[col.COULUMN_NAME1].ToString()));
+									if (red1[col.COULUMN_NAME1].ToString() != red2[col.COULUMN_NAME1].ToString())
+									{
+										differentExist = true;
 
-                                    }
-                                }
-                            }
-                            else differentNotExist = true;
-                            red2.Close();
-                            if (differentExist)
-                            {
-                                if (!this.settings.IsDbAPriority)
-                                {
-                                    output.Add(db2.prip.updateRow(tab.getTableName(), cvlist1, new ColVal(kk.NameOfColumns[0], key)));
-                                }
-                               
-                            }
-                            if (differentNotExist)
-                            {
-                                foreach (Columnn col in tab.getTabA().Stlpce)
-                                {
-                                    cvlist1.Add(new ColVal(col.COULUMN_NAME1, red1[col.COULUMN_NAME1].ToString()));
-                                }
-                                output.Add(db1.prip.insertRow(tab.getTableName(), cvlist1));
-                            }
-                        }
-                        red1.Close();
-                        red1 = db1.prip.getReaderOfTable(tab.getTableName(), "", "");
-                        while (red1.Read())
-                        {
-                            bool differentExist = false;
-                            bool differentNotExist = false;
-                            List<ColVal> cvlist = new List<ColVal>();
-                            string key = red1[kk.NameOfColumns[0]].ToString();
-                            DbDataReader red2 = db2.prip.getReaderOfTable(tab.getTableName(), kk.NameOfColumns[0], key);
-                            if (red2.Read())
-                            {
+									}
+								}
+							}
+							else differentNotExist = true;
+							red2.Close();
+							if (differentExist)
+							{
+								if (!this.settings.IsDbAPriority)
+								{
+									output.Add(db1.prip.updateRow(tab.getTableName(), cvlist1, new ColVal(kk.NameOfColumns[0], key)));
+								}
+							   
+							}
+							if (differentNotExist)
+							{
+								foreach (Columnn col in tab.getTabA().Stlpce)
+								{
+									cvlist1.Add(new ColVal(col.COULUMN_NAME1, red1[col.COULUMN_NAME1].ToString()));
+								}
+								output.Add(db1.prip.insertRow(tab.getTableName(), cvlist1));
+							}
+						}
+						red1.Close();
+						red1 = db1.prip.getReaderOfTable(tab.getTableName(), "", "");
+						while (red1.Read())
+						{
+							bool differentExist = false;
+							bool differentNotExist = false;
+							List<ColVal> cvlist = new List<ColVal>();
+							string key = red1[kk.NameOfColumns[0]].ToString();
+							DbDataReader red2 = db2.prip.getReaderOfTable(tab.getTableName(), kk.NameOfColumns[0], key);
+							if (red2.Read())
+							{
 
-                                foreach (Columnn col in tab.getTabA().Stlpce)
-                                {
-                                    cvlist.Add(new ColVal(col.COULUMN_NAME1, red1[col.COULUMN_NAME1].ToString()));
-                                    if (red1[col.COULUMN_NAME1].ToString() != red2[col.COULUMN_NAME1].ToString())
-                                    {
-                                        differentExist = true;
+								foreach (Columnn col in tab.getTabA().Stlpce)
+								{
+									cvlist.Add(new ColVal(col.COULUMN_NAME1, red1[col.COULUMN_NAME1].ToString()));
+									if (red1[col.COULUMN_NAME1].ToString() != red2[col.COULUMN_NAME1].ToString())
+									{
+										differentExist = true;
 
-                                    }
-                                }
-                            }
-                            else differentNotExist = true;
-                            red2.Close();
-                            //if (differentExist)
-                            //{
-                            //    output.Add(db2.prip.updateRow(tab.getTableName(), cvlist, new ColVal(key, red1[key].ToString())));
-                            //}
-                            if (differentNotExist)
-                            {
-                                foreach (Columnn col in tab.getTabA().Stlpce)
-                                {
-                                  //  cvlist.Add(new ColVal(col.COULUMN_NAME1, red1[col.COULUMN_NAME1].ToString()));
-                                }
-                               // output.Add(db2.prip.insertRow(tab.getTableName(), cvlist));
-                            }
-                        }
-                        red1.Close();
-                    }
+									}
+								}
+							}
+							else differentNotExist = true;
+							red2.Close();
+							//if (differentExist)
+							//{
+							//    output.Add(db2.prip.updateRow(tab.getTableName(), cvlist, new ColVal(key, red1[key].ToString())));
+							//}
+							if (differentNotExist)
+							{
+								foreach (Columnn col in tab.getTabA().Stlpce)
+								{
+								  //  cvlist.Add(new ColVal(col.COULUMN_NAME1, red1[col.COULUMN_NAME1].ToString()));
+								}
+							   // output.Add(db2.prip.insertRow(tab.getTableName(), cvlist));
+							}
+						}
+						red1.Close();
+					}
 
-                }
-                else throw new Exception("Cannot synchronize data on this table, because there is no primary key or composite primary key");
+				}
+				else throw new Exception("Cannot synchronize data on this table, because there is no primary key or composite primary key");
 
-            }
-            else
-                throw new Exception("Cannot synchronize data on non synchronized tables, synchronize schema first please");
-            return output;
-            //return null;
+			}
+			else
+				throw new Exception("Cannot synchronize data on non synchronized tables, synchronize schema first please");
+			return output;
+			//return null;
 		}
 
 	   

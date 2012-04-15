@@ -45,7 +45,6 @@
             this.textBox1.TabIndex = 0;
             this.textBox1.Text = "server=localhost;database=NorthwindMaster;uid=User1;pwd=heslo;MultipleActiveResul" +
     "tSets=True;";
-           
             // 
             // button1
             // 
@@ -55,6 +54,7 @@
             this.button1.TabIndex = 1;
             this.button1.Text = "OK";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Visible = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // cbDatabaza
@@ -62,9 +62,8 @@
             this.cbDatabaza.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbDatabaza.FormattingEnabled = true;
             this.cbDatabaza.Items.AddRange(new object[] {
-            "MSSQL",
-            "MySQL"});
-            this.cbDatabaza.Location = new System.Drawing.Point(43, 144);
+            "MSSQL"});
+            this.cbDatabaza.Location = new System.Drawing.Point(193, 132);
             this.cbDatabaza.Name = "cbDatabaza";
             this.cbDatabaza.Size = new System.Drawing.Size(121, 21);
             this.cbDatabaza.TabIndex = 2;
@@ -98,7 +97,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(336, 171);
+            this.button2.Location = new System.Drawing.Point(222, 171);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 23);
             this.button2.TabIndex = 6;

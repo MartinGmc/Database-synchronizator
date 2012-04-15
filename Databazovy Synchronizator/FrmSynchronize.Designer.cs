@@ -57,13 +57,13 @@
             this.cbTables = new System.Windows.Forms.CheckBox();
             this.cbAll = new System.Windows.Forms.CheckBox();
             this.tabData = new System.Windows.Forms.TabPage();
+            this.btnScrDb2 = new System.Windows.Forms.Button();
+            this.btnScriptDb1 = new System.Windows.Forms.Button();
+            this.btnGen = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.lbTables = new System.Windows.Forms.ListBox();
             this.ttPriority = new System.Windows.Forms.ToolTip(this.components);
             this.ttTypeOfSync = new System.Windows.Forms.ToolTip(this.components);
-            this.lbTables = new System.Windows.Forms.ListBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.btnGen = new System.Windows.Forms.Button();
-            this.btnScriptDb1 = new System.Windows.Forms.Button();
-            this.btnScrDb2 = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabSettings.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -401,6 +401,53 @@
             this.tabData.Text = "DataSynchronization";
             this.tabData.UseVisualStyleBackColor = true;
             // 
+            // btnScrDb2
+            // 
+            this.btnScrDb2.Location = new System.Drawing.Point(555, 174);
+            this.btnScrDb2.Name = "btnScrDb2";
+            this.btnScrDb2.Size = new System.Drawing.Size(75, 46);
+            this.btnScrDb2.TabIndex = 4;
+            this.btnScrDb2.Text = "Scripts for DB2";
+            this.btnScrDb2.UseVisualStyleBackColor = true;
+            this.btnScrDb2.Click += new System.EventHandler(this.btnScrDb2_Click);
+            // 
+            // btnScriptDb1
+            // 
+            this.btnScriptDb1.Location = new System.Drawing.Point(555, 123);
+            this.btnScriptDb1.Name = "btnScriptDb1";
+            this.btnScriptDb1.Size = new System.Drawing.Size(75, 45);
+            this.btnScriptDb1.TabIndex = 3;
+            this.btnScriptDb1.Text = "scripts for DB1";
+            this.btnScriptDb1.UseVisualStyleBackColor = true;
+            this.btnScriptDb1.Click += new System.EventHandler(this.btnScriptDb1_Click);
+            // 
+            // btnGen
+            // 
+            this.btnGen.Location = new System.Drawing.Point(555, 75);
+            this.btnGen.Name = "btnGen";
+            this.btnGen.Size = new System.Drawing.Size(75, 42);
+            this.btnGen.TabIndex = 2;
+            this.btnGen.Text = "Generate Scripts";
+            this.btnGen.UseVisualStyleBackColor = true;
+            this.btnGen.Click += new System.EventHandler(this.btnGen_Click);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(8, 19);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(105, 13);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Table to synchronize";
+            // 
+            // lbTables
+            // 
+            this.lbTables.FormattingEnabled = true;
+            this.lbTables.Location = new System.Drawing.Point(11, 35);
+            this.lbTables.Name = "lbTables";
+            this.lbTables.Size = new System.Drawing.Size(400, 238);
+            this.lbTables.TabIndex = 0;
+            // 
             // ttPriority
             // 
             this.ttPriority.AutoPopDelay = 20000;
@@ -415,53 +462,6 @@
             this.ttTypeOfSync.ReshowDelay = 100;
             this.ttTypeOfSync.ToolTipTitle = "Setting type of synchronization";
             // 
-            // lbTables
-            // 
-            this.lbTables.FormattingEnabled = true;
-            this.lbTables.Location = new System.Drawing.Point(11, 35);
-            this.lbTables.Name = "lbTables";
-            this.lbTables.Size = new System.Drawing.Size(400, 238);
-            this.lbTables.TabIndex = 0;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(8, 19);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(105, 13);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Table to synchronize";
-            // 
-            // btnGen
-            // 
-            this.btnGen.Location = new System.Drawing.Point(555, 75);
-            this.btnGen.Name = "btnGen";
-            this.btnGen.Size = new System.Drawing.Size(75, 42);
-            this.btnGen.TabIndex = 2;
-            this.btnGen.Text = "Generate Scripts";
-            this.btnGen.UseVisualStyleBackColor = true;
-            this.btnGen.Click += new System.EventHandler(this.btnGen_Click);
-            // 
-            // btnScriptDb1
-            // 
-            this.btnScriptDb1.Location = new System.Drawing.Point(555, 123);
-            this.btnScriptDb1.Name = "btnScriptDb1";
-            this.btnScriptDb1.Size = new System.Drawing.Size(75, 45);
-            this.btnScriptDb1.TabIndex = 3;
-            this.btnScriptDb1.Text = "scripts for DB1";
-            this.btnScriptDb1.UseVisualStyleBackColor = true;
-            this.btnScriptDb1.Click += new System.EventHandler(this.btnScriptDb1_Click);
-            // 
-            // btnScrDb2
-            // 
-            this.btnScrDb2.Location = new System.Drawing.Point(555, 174);
-            this.btnScrDb2.Name = "btnScrDb2";
-            this.btnScrDb2.Size = new System.Drawing.Size(75, 46);
-            this.btnScrDb2.TabIndex = 4;
-            this.btnScrDb2.Text = "Scripts for DB2";
-            this.btnScrDb2.UseVisualStyleBackColor = true;
-            this.btnScrDb2.Click += new System.EventHandler(this.btnScrDb2_Click);
-            // 
             // FrmSynchronize
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -469,7 +469,7 @@
             this.ClientSize = new System.Drawing.Size(688, 319);
             this.Controls.Add(this.tabControl1);
             this.Name = "FrmSynchronize";
-            this.Text = "FrmSynchronize";
+            this.Text = "Synchronization";
             this.tabControl1.ResumeLayout(false);
             this.tabSettings.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);

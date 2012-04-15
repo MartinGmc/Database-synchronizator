@@ -31,10 +31,6 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainFrm));
             this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
-            this.statusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
-            this.statusLabel2 = new System.Windows.Forms.ToolStripStatusLabel();
             this.tvDb1 = new System.Windows.Forms.TreeView();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.tvDb2 = new System.Windows.Forms.TreeView();
@@ -46,12 +42,9 @@
             this.lvExDb2 = new ListViewEmbeddedControls.ListViewEx();
             this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.button3 = new System.Windows.Forms.Button();
             this.cmTvDB1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.vyberDoPorovnaniaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.button4 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
-            this.statusStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.cmTvDB1.SuspendLayout();
@@ -61,45 +54,11 @@
             // 
             this.button1.Location = new System.Drawing.Point(12, 12);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.Size = new System.Drawing.Size(130, 23);
             this.button1.TabIndex = 0;
-            this.button1.Text = "Pripoj DB 1";
+            this.button1.Text = "Connect databases";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(93, 12);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "pripoj DB 2";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // statusStrip1
-            // 
-            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.statusLabel1,
-            this.statusLabel2});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 424);
-            this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(1194, 22);
-            this.statusStrip1.TabIndex = 2;
-            this.statusStrip1.Text = "statusStrip1";
-            this.statusStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.statusStrip1_ItemClicked);
-            // 
-            // statusLabel1
-            // 
-            this.statusLabel1.Name = "statusLabel1";
-            this.statusLabel1.Size = new System.Drawing.Size(127, 17);
-            this.statusLabel1.Text = "Databaza1 nepripojena";
-            // 
-            // statusLabel2
-            // 
-            this.statusLabel2.Name = "statusLabel2";
-            this.statusLabel2.Size = new System.Drawing.Size(127, 17);
-            this.statusLabel2.Text = "Databaza2 nepripojena";
             // 
             // tvDb1
             // 
@@ -160,7 +119,7 @@
             this.groupBox1.Size = new System.Drawing.Size(245, 330);
             this.groupBox1.TabIndex = 5;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "DB1 vlastnosti";
+            this.groupBox1.Text = "DB1 Properties";
             // 
             // lvExDb1
             // 
@@ -180,12 +139,12 @@
             // 
             // columnHeader3
             // 
-            this.columnHeader3.Text = "Atribút";
+            this.columnHeader3.Text = "Atribute";
             this.columnHeader3.Width = 88;
             // 
             // columnHeader4
             // 
-            this.columnHeader4.Text = "Hodnota";
+            this.columnHeader4.Text = "Value";
             this.columnHeader4.Width = 140;
             // 
             // groupBox2
@@ -196,7 +155,7 @@
             this.groupBox2.Size = new System.Drawing.Size(257, 330);
             this.groupBox2.TabIndex = 6;
             this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "DB2 vlastnosti";
+            this.groupBox2.Text = "DB2 properties";
             // 
             // lvExDb2
             // 
@@ -215,23 +174,13 @@
             // 
             // columnHeader5
             // 
-            this.columnHeader5.Text = "Atribút";
+            this.columnHeader5.Text = "Atribute";
             this.columnHeader5.Width = 88;
             // 
             // columnHeader6
             // 
-            this.columnHeader6.Text = "Hodnota";
+            this.columnHeader6.Text = "Value";
             this.columnHeader6.Width = 140;
-            // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(203, 12);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
-            this.button3.TabIndex = 7;
-            this.button3.Text = "button3";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click_1);
             // 
             // cmTvDB1
             // 
@@ -246,19 +195,9 @@
             this.vyberDoPorovnaniaToolStripMenuItem.Size = new System.Drawing.Size(184, 22);
             this.vyberDoPorovnaniaToolStripMenuItem.Text = "Vyber do porovnania";
             // 
-            // button4
-            // 
-            this.button4.Location = new System.Drawing.Point(284, 12);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(75, 23);
-            this.button4.TabIndex = 8;
-            this.button4.Text = "button4";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
-            // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(397, 12);
+            this.button5.Location = new System.Drawing.Point(148, 12);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(75, 23);
             this.button5.TabIndex = 9;
@@ -271,44 +210,31 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1194, 446);
-            this.Controls.Add(this.button5);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
             this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.button5);
             this.Controls.Add(this.tvDb2);
             this.Controls.Add(this.tvDb1);
             this.Controls.Add(this.groupBox2);
-            this.Controls.Add(this.statusStrip1);
-            this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Name = "MainFrm";
-            this.Text = "Databazovy synchronizator";
-            this.statusStrip1.ResumeLayout(false);
-            this.statusStrip1.PerformLayout();
+            this.Text = "Database synchronizator";
             this.groupBox1.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.cmTvDB1.ResumeLayout(false);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.StatusStrip statusStrip1;
         private System.Windows.Forms.TreeView tvDb1;
         private System.Windows.Forms.TreeView tvDb2;
-        private System.Windows.Forms.ToolStripStatusLabel statusLabel1;
-        private System.Windows.Forms.ToolStripStatusLabel statusLabel2;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.Button button3;
         private System.Windows.Forms.ImageList imageList1;
         private System.Windows.Forms.ContextMenuStrip cmTvDB1;
         private System.Windows.Forms.ToolStripMenuItem vyberDoPorovnaniaToolStripMenuItem;
-        private System.Windows.Forms.Button button4;
         private ListViewEmbeddedControls.ListViewEx lvExDb1;
         private System.Windows.Forms.ColumnHeader columnHeader3;
         private System.Windows.Forms.ColumnHeader columnHeader4;

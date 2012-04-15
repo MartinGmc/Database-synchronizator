@@ -32,7 +32,6 @@
             this.lineNumbers_For_RichTextBox2 = new LineNumbers.LineNumbers_For_RichTextBox();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.button4 = new System.Windows.Forms.Button();
             this.btnCopy = new System.Windows.Forms.Button();
             this.btnSaveToFile = new System.Windows.Forms.Button();
             this.btnExecute = new System.Windows.Forms.Button();
@@ -103,7 +102,6 @@
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.button4);
             this.panel2.Controls.Add(this.btnCopy);
             this.panel2.Controls.Add(this.btnSaveToFile);
             this.panel2.Controls.Add(this.btnExecute);
@@ -113,18 +111,9 @@
             this.panel2.Size = new System.Drawing.Size(621, 59);
             this.panel2.TabIndex = 1;
             // 
-            // button4
-            // 
-            this.button4.Location = new System.Drawing.Point(420, 18);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(75, 23);
-            this.button4.TabIndex = 3;
-            this.button4.Text = "button4";
-            this.button4.UseVisualStyleBackColor = true;
-            // 
             // btnCopy
             // 
-            this.btnCopy.Location = new System.Drawing.Point(261, 18);
+            this.btnCopy.Location = new System.Drawing.Point(379, 18);
             this.btnCopy.Name = "btnCopy";
             this.btnCopy.Size = new System.Drawing.Size(111, 23);
             this.btnCopy.TabIndex = 2;
@@ -134,7 +123,7 @@
             // 
             // btnSaveToFile
             // 
-            this.btnSaveToFile.Location = new System.Drawing.Point(160, 18);
+            this.btnSaveToFile.Location = new System.Drawing.Point(229, 18);
             this.btnSaveToFile.Name = "btnSaveToFile";
             this.btnSaveToFile.Size = new System.Drawing.Size(75, 23);
             this.btnSaveToFile.TabIndex = 1;
@@ -144,7 +133,7 @@
             // 
             // btnExecute
             // 
-            this.btnExecute.Location = new System.Drawing.Point(45, 18);
+            this.btnExecute.Location = new System.Drawing.Point(83, 18);
             this.btnExecute.Name = "btnExecute";
             this.btnExecute.Size = new System.Drawing.Size(75, 23);
             this.btnExecute.TabIndex = 0;
@@ -169,7 +158,7 @@
             this.ClientSize = new System.Drawing.Size(621, 365);
             this.Controls.Add(this.panel3);
             this.Name = "FrmSqlShow";
-            this.Text = "FrmSqlShow";
+            this.Text = "Generated SQL code";
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
@@ -184,7 +173,6 @@
         private System.Windows.Forms.Panel panel2;
         private LineNumbers.LineNumbers_For_RichTextBox lineNumbers_For_RichTextBox2;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button btnCopy;
         private System.Windows.Forms.Button btnSaveToFile;
         private System.Windows.Forms.Button btnExecute;
