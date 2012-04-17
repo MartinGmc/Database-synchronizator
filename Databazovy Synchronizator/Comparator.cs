@@ -225,7 +225,7 @@ namespace Databazovy_Synchronizator
 		{
 
 			DBsyncTvEmptyType hlavny = new DBsyncTvEmptyType(DatabaseDifferences.getNameA(), DBsyncTreeview.DatabaseIcon);
-			DBsyncTvEmptyType tabb = new DBsyncTvEmptyType("Tabuľky", DBsyncTreeview.TablesIcon);
+			DBsyncTvEmptyType tabb = new DBsyncTvEmptyType("Tables", DBsyncTreeview.TablesIcon);
 			if (DatabaseDifferences.AreDiffTables()) tabb.Azvyraznene = true;
 			hlavny.Nodes.Add(tabb);
 			foreach (DbSyncTableDiff tab in DatabaseDifferences.getTablediff())
@@ -236,7 +236,7 @@ namespace Databazovy_Synchronizator
 					DBsyncTvTableType novy = new DBsyncTvTableType(tabA);
 					if (tab.isDifferent()) novy.Azvyraznene = true;
 
-					DBsyncTvEmptyType Stlpc = new DBsyncTvEmptyType("Stĺpce", DBsyncTreeview.ColumnsIcon);
+					DBsyncTvEmptyType Stlpc = new DBsyncTvEmptyType("Coulumns", DBsyncTreeview.ColumnsIcon);
 					
 					if (tab.DiffCoulumns()) Stlpc.Azvyraznene = true;
 					novy.Nodes.Add(Stlpc);
@@ -252,7 +252,7 @@ namespace Databazovy_Synchronizator
 						}
 					}
 
-					DBsyncTvEmptyType keys = new DBsyncTvEmptyType("Kľúče", DBsyncTreeview.KeysIcon);
+					DBsyncTvEmptyType keys = new DBsyncTvEmptyType("Keys", DBsyncTreeview.KeysIcon);
 					if (tab.DiffKeys()) keys.Azvyraznene = true;
 					novy.Nodes.Add(keys);
 					foreach (DbSyncKeyDiff k in tab.KeysDifList())
@@ -279,7 +279,7 @@ namespace Databazovy_Synchronizator
 						}
 					}*/
 
-					DBsyncTvEmptyType constr = new DBsyncTvEmptyType("Constrainty", DBsyncTreeview.ConstraintsIcon);
+					DBsyncTvEmptyType constr = new DBsyncTvEmptyType("Constraints", DBsyncTreeview.ConstraintsIcon);
 					novy.Nodes.Add(constr);
 					if (tab.DiffConstraints()) constr.Azvyraznene = true;
 					foreach (DbSyncConstraintDiff c in tab.ConstraiontDifList())
@@ -296,7 +296,7 @@ namespace Databazovy_Synchronizator
 						}
 					}
 
-					DBsyncTvEmptyType trig = new DBsyncTvEmptyType("Triggre", DBsyncTreeview.TriggersIcon);
+					DBsyncTvEmptyType trig = new DBsyncTvEmptyType("Triggers", DBsyncTreeview.TriggersIcon);
 					novy.Nodes.Add(trig);
 					if (tab.DiffTriggers()) trig.Azvyraznene = true;
 					foreach (DbSyncTriggerDiff t in tab.TriggerDiffList())
@@ -311,7 +311,7 @@ namespace Databazovy_Synchronizator
 						}
 					}
 
-					DBsyncTvEmptyType granty = new DBsyncTvEmptyType("Granty", DBsyncTreeview.GrantsIcon);
+					DBsyncTvEmptyType granty = new DBsyncTvEmptyType("Grants", DBsyncTreeview.GrantsIcon);
 					novy.Nodes.Add(granty);
 					if (tab.DiffPrivileges()) granty.Azvyraznene = true;
 					foreach (DbSyncPrivilegeDiff p in tab.PrivilegeDifList())
@@ -325,7 +325,7 @@ namespace Databazovy_Synchronizator
 						}
 					}
 
-					DBsyncTvEmptyType indexyy = new DBsyncTvEmptyType("Indexy", DBsyncTreeview.IndexesIcon);
+					DBsyncTvEmptyType indexyy = new DBsyncTvEmptyType("Indexes", DBsyncTreeview.IndexesIcon);
 					novy.Nodes.Add(indexyy);
 					if (tab.DiffIndexes()) indexyy.Azvyraznene = true;
 					foreach (DbSyncIndexDiff i in tab.IndexesDifList())
@@ -354,7 +354,7 @@ namespace Databazovy_Synchronizator
 					if (sp.isDifferent()) novy.Azvyraznene = true;
 					procedures.Nodes.Add(novy);
 
-					DBsyncTvEmptyType granty = new DBsyncTvEmptyType("Granty", DBsyncTreeview.GrantsIcon);
+					DBsyncTvEmptyType granty = new DBsyncTvEmptyType("Grants", DBsyncTreeview.GrantsIcon);
 					novy.Nodes.Add(granty);
 					novy.ObjectAtributesList = sp.StoredProcDiffListA;
 					novy.SqlTextList = sp.SqlTextListA;
@@ -374,7 +374,7 @@ namespace Databazovy_Synchronizator
 				
 
 			}
-			DBsyncTvEmptyType funkc = new DBsyncTvEmptyType("Funkcie", DBsyncTreeview.FunctionsIcon);
+			DBsyncTvEmptyType funkc = new DBsyncTvEmptyType("Functions", DBsyncTreeview.FunctionsIcon);
 			if (DatabaseDifferences.AreDiffFunctions()) funkc.Azvyraznene = true;
 			hlavny.Nodes.Add(funkc);
 			foreach (DbSyncFunctionDiff sf in DatabaseDifferences.getFunctionDiff())
@@ -387,7 +387,7 @@ namespace Databazovy_Synchronizator
 					if (sf.isDifferent()) novy.Azvyraznene = true;
 					funkc.Nodes.Add(novy);
 
-					DBsyncTvEmptyType granty = new DBsyncTvEmptyType("Granty", DBsyncTreeview.GrantsIcon);
+					DBsyncTvEmptyType granty = new DBsyncTvEmptyType("Grants", DBsyncTreeview.GrantsIcon);
 					novy.Nodes.Add(granty);
 					novy.ObjectAtributesList = sf.FunctionAtributesA;
 					if (sf.DiffPrivileges) granty.Azvyraznene = true;
@@ -404,7 +404,7 @@ namespace Databazovy_Synchronizator
 				}
 			}
 
-			DBsyncTvEmptyType types = new DBsyncTvEmptyType("Typy", DBsyncTreeview.TypesIcon);
+			DBsyncTvEmptyType types = new DBsyncTvEmptyType("Types", DBsyncTreeview.TypesIcon);
 			if (DatabaseDifferences.AreDiffTypes()) types.Azvyraznene = true;
 			hlavny.Nodes.Add(types);
 			foreach (DbSyncTypeDiff tp in DatabaseDifferences.getTypesDiff())
@@ -417,7 +417,7 @@ namespace Databazovy_Synchronizator
 					types.Nodes.Add(novy);
 				}
 			}
-			DBsyncTvEmptyType users = new DBsyncTvEmptyType("Používatelia", DBsyncTreeview.UsersIcon);
+			DBsyncTvEmptyType users = new DBsyncTvEmptyType("Users", DBsyncTreeview.UsersIcon);
 			if (DatabaseDifferences.AreDiffUSers()) users.Azvyraznene = true;
 			hlavny.Nodes.Add(users);
 			foreach (DbSyncUserDiff usr in DatabaseDifferences.getUserDiff())
@@ -439,7 +439,7 @@ namespace Databazovy_Synchronizator
 		{
 
 			DBsyncTvEmptyType hlavny = new DBsyncTvEmptyType(DatabaseDifferences.getNameB(), DBsyncTreeview.DatabaseIcon);
-			DBsyncTvEmptyType tabb = new DBsyncTvEmptyType("Tabuľky", DBsyncTreeview.TablesIcon);
+			DBsyncTvEmptyType tabb = new DBsyncTvEmptyType("Tables", DBsyncTreeview.TablesIcon);
 			if (DatabaseDifferences.AreDiffTables()) tabb.Azvyraznene = true;
 			hlavny.Nodes.Add(tabb);
 			foreach (DbSyncTableDiff tab in DatabaseDifferences.getTablediff())
@@ -450,7 +450,7 @@ namespace Databazovy_Synchronizator
 					DBsyncTvTableType novy = new DBsyncTvTableType(tabB);
 					if (tab.isDifferent()) novy.Azvyraznene = true;
 
-					DBsyncTvEmptyType Stlpc = new DBsyncTvEmptyType("Stĺpce", DBsyncTreeview.ColumnsIcon);
+					DBsyncTvEmptyType Stlpc = new DBsyncTvEmptyType("Coulumns", DBsyncTreeview.ColumnsIcon);
 					if (tab.DiffCoulumns()) Stlpc.Azvyraznene = true;
 					novy.Nodes.Add(Stlpc);
 
@@ -465,7 +465,7 @@ namespace Databazovy_Synchronizator
 						}
 					}
 
-					DBsyncTvEmptyType keys = new DBsyncTvEmptyType("Kľúče", DBsyncTreeview.KeysIcon);
+					DBsyncTvEmptyType keys = new DBsyncTvEmptyType("Keys", DBsyncTreeview.KeysIcon);
 					if (tab.DiffKeys()) keys.Azvyraznene = true;
 					novy.Nodes.Add(keys);
 					foreach (DbSyncKeyDiff k in tab.KeysDifList())
@@ -492,7 +492,7 @@ namespace Databazovy_Synchronizator
 						}
 					}*/
 
-					DBsyncTvEmptyType constr = new DBsyncTvEmptyType("Constrainty", DBsyncTreeview.ConstraintsIcon);
+					DBsyncTvEmptyType constr = new DBsyncTvEmptyType("Constraints", DBsyncTreeview.ConstraintsIcon);
 					novy.Nodes.Add(constr);
 					if (tab.DiffConstraints()) constr.Azvyraznene = true;
 					foreach (DbSyncConstraintDiff c in tab.ConstraiontDifList())
@@ -509,7 +509,7 @@ namespace Databazovy_Synchronizator
 						}
 					}
 
-					DBsyncTvEmptyType trig = new DBsyncTvEmptyType("Triggre", DBsyncTreeview.TriggersIcon);
+					DBsyncTvEmptyType trig = new DBsyncTvEmptyType("Triggers", DBsyncTreeview.TriggersIcon);
 					novy.Nodes.Add(trig);
 					if (tab.DiffTriggers()) trig.Azvyraznene = true;
 					foreach (DbSyncTriggerDiff t in tab.TriggerDiffList())
@@ -524,7 +524,7 @@ namespace Databazovy_Synchronizator
 						}
 					}
 
-					DBsyncTvEmptyType granty = new DBsyncTvEmptyType("Granty", DBsyncTreeview.GrantsIcon);
+					DBsyncTvEmptyType granty = new DBsyncTvEmptyType("Grants", DBsyncTreeview.GrantsIcon);
 					novy.Nodes.Add(granty);
 					if (tab.DiffPrivileges()) granty.Azvyraznene = true;
 					foreach (DbSyncPrivilegeDiff p in tab.PrivilegeDifList())
@@ -538,7 +538,7 @@ namespace Databazovy_Synchronizator
 						}
 					}
 
-					DBsyncTvEmptyType indexyy = new DBsyncTvEmptyType("Indexy", DBsyncTreeview.IndexesIcon);
+					DBsyncTvEmptyType indexyy = new DBsyncTvEmptyType("Indexes", DBsyncTreeview.IndexesIcon);
 					novy.Nodes.Add(indexyy);
 					if (tab.DiffIndexes()) indexyy.Azvyraznene = true;
 					foreach (DbSyncIndexDiff i in tab.IndexesDifList())
@@ -569,7 +569,7 @@ namespace Databazovy_Synchronizator
 					novy.ObjectAtributesList = sp.StoredProcDiffListB;
 					procedures.Nodes.Add(novy);
 
-					DBsyncTvEmptyType granty = new DBsyncTvEmptyType("Granty", DBsyncTreeview.GrantsIcon);
+					DBsyncTvEmptyType granty = new DBsyncTvEmptyType("Grants", DBsyncTreeview.GrantsIcon);
 					novy.Nodes.Add(granty);
 					if (sp.DiffPrivileges) granty.Azvyraznene = true;
 					foreach (DbSyncPrivilegeDiff p in sp.PrivilegeDifList())
@@ -584,7 +584,7 @@ namespace Databazovy_Synchronizator
 					}
 				}
 			}
-			DBsyncTvEmptyType funkc = new DBsyncTvEmptyType("Funkcie", DBsyncTreeview.FunctionsIcon);
+			DBsyncTvEmptyType funkc = new DBsyncTvEmptyType("Functions", DBsyncTreeview.FunctionsIcon);
 			if (DatabaseDifferences.AreDiffFunctions()) funkc.Azvyraznene = true;
 			hlavny.Nodes.Add(funkc);
 			foreach (DbSyncFunctionDiff sf in DatabaseDifferences.getFunctionDiff())
@@ -597,7 +597,7 @@ namespace Databazovy_Synchronizator
 					if (sf.isDifferent()) novy.Azvyraznene = true;
 					funkc.Nodes.Add(novy);
 
-					DBsyncTvEmptyType granty = new DBsyncTvEmptyType("Granty", DBsyncTreeview.GrantsIcon);
+					DBsyncTvEmptyType granty = new DBsyncTvEmptyType("Grants", DBsyncTreeview.GrantsIcon);
 					novy.Nodes.Add(granty);
 					novy.ObjectAtributesList = sf.FunctionAtributesB;
 					if (sf.DiffPrivileges) granty.Azvyraznene = true;
@@ -614,7 +614,7 @@ namespace Databazovy_Synchronizator
 				}
 			}
 
-			DBsyncTvEmptyType types = new DBsyncTvEmptyType("Typy", DBsyncTreeview.TypesIcon);
+			DBsyncTvEmptyType types = new DBsyncTvEmptyType("Types", DBsyncTreeview.TypesIcon);
 			if (DatabaseDifferences.AreDiffTypes()) types.Azvyraznene = true;
 			hlavny.Nodes.Add(types);
 			foreach (DbSyncTypeDiff tp in DatabaseDifferences.getTypesDiff())
@@ -627,7 +627,7 @@ namespace Databazovy_Synchronizator
 					types.Nodes.Add(novy);
 				}
 			}
-			DBsyncTvEmptyType users = new DBsyncTvEmptyType("Používatelia", DBsyncTreeview.UsersIcon);
+			DBsyncTvEmptyType users = new DBsyncTvEmptyType("Users", DBsyncTreeview.UsersIcon);
 			if (DatabaseDifferences.AreDiffUSers()) users.Azvyraznene = true;
 			hlavny.Nodes.Add(users);
 			foreach (DbSyncUserDiff usr in DatabaseDifferences.getUserDiff())

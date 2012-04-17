@@ -61,26 +61,26 @@ namespace Databazovy_Synchronizator
             getTvDb2().Nodes.Add(strom2);
         }
         
-        private void Akt_vypis(object sender, EventArgs e)
-        {
-            tvDb1.Nodes.Clear();
-            tvDb2.Nodes.Clear();
-            if (comp.jePrip1Aktivne())
-            {
-                DBsyncTreeview strom = comp.db1.vyrobStrom();
-                aktualizujIkonky(strom);
-                tvDb1.Nodes.Add(strom);
-            }
+        //private void Akt_vypis(object sender, EventArgs e)
+        //{
+        //    tvDb1.Nodes.Clear();
+        //    tvDb2.Nodes.Clear();
+        //    if (comp.jePrip1Aktivne())
+        //    {
+        //        DBsyncTreeview strom = comp.db1.vyrobStrom();
+        //        aktualizujIkonky(strom);
+        //        tvDb1.Nodes.Add(strom);
+        //    }
 
-            if (comp.jePrip2Aktivne())
-            {
-                DBsyncTreeview strom = comp.db2.vyrobStrom();
-                aktualizujIkonky(strom);
-                tvDb2.Nodes.Add(strom);
+        //    if (comp.jePrip2Aktivne())
+        //    {
+        //        DBsyncTreeview strom = comp.db2.vyrobStrom();
+        //        aktualizujIkonky(strom);
+        //        tvDb2.Nodes.Add(strom);
                 
                 
-            }
-        }
+        //    }
+        //}
         
         private void statusStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
         {

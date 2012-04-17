@@ -125,115 +125,115 @@ namespace Databazovy_Synchronizator
         {
             return pripAktivne;
         }
-        public DBsyncTreeview vyrobStrom()
-        {
+        //public DBsyncTreeview vyrobStrom()
+        //{
 
-            DBsyncTvEmptyType hlavny = new DBsyncTvEmptyType(prip.dajNazovDB(), DBsyncTreeview.DatabaseIcon);
-            DBsyncTvEmptyType tabb = new DBsyncTvEmptyType("Tabuľky", DBsyncTreeview.TablesIcon);
-            hlavny.Nodes.Add(tabb);
-            foreach (Tablee tab in tabulky)
-            {
-                DBsyncTvTableType novy = new DBsyncTvTableType(tab);
-                if (tab.OdlisneConstrainty || tab.OdlisneIndexy || tab.OdlisnePrivileges || tab.OdlisneStlpce || tab.OdlisneTrigre) novy.Azvyraznene = true;
+        //    DBsyncTvEmptyType hlavny = new DBsyncTvEmptyType(prip.dajNazovDB(), DBsyncTreeview.DatabaseIcon);
+        //    DBsyncTvEmptyType tabb = new DBsyncTvEmptyType("Tabuľky", DBsyncTreeview.TablesIcon);
+        //    hlavny.Nodes.Add(tabb);
+        //    foreach (Tablee tab in tabulky)
+        //    {
+        //        DBsyncTvTableType novy = new DBsyncTvTableType(tab);
+        //        if (tab.OdlisneConstrainty || tab.OdlisneIndexy || tab.OdlisnePrivileges || tab.OdlisneStlpce || tab.OdlisneTrigre) novy.Azvyraznene = true;
 
-                DBsyncTvEmptyType Stlpc = new DBsyncTvEmptyType("Stĺpce", DBsyncTreeview.ColumnsIcon);
-                if (tab.OdlisneStlpce) Stlpc.Azvyraznene = true; 
-                novy.Nodes.Add(Stlpc);
+        //        DBsyncTvEmptyType Stlpc = new DBsyncTvEmptyType("Stĺpce", DBsyncTreeview.ColumnsIcon);
+        //        if (tab.OdlisneStlpce) Stlpc.Azvyraznene = true; 
+        //        novy.Nodes.Add(Stlpc);
 
-                foreach (Columnn s in tab.Stlpce)
-                {
-                    DbsyncTvColumnType novystlpec = new DbsyncTvColumnType(s);
-                    Stlpc.Nodes.Add(novystlpec);
-                }
+        //        foreach (Columnn s in tab.Stlpce)
+        //        {
+        //            DbsyncTvColumnType novystlpec = new DbsyncTvColumnType(s);
+        //            Stlpc.Nodes.Add(novystlpec);
+        //        }
 
-                DBsyncTvEmptyType keys = new DBsyncTvEmptyType("Kľúče", DBsyncTreeview.KeysIcon);
-                novy.Nodes.Add(keys);
-                foreach (Columnn s in tab.Stlpce)
-                {
-                    if (s.Is_primaryKey())
-                    {
-                        DbsyncTvKeyType pk = new DbsyncTvKeyType(s);
-                        keys.Nodes.Add(pk);
-                    }
-                    if (s.Is_foreinKey())
-                    {
-                        DbsyncTvKeyType fk = new DbsyncTvKeyType(s);
-                        keys.Nodes.Add(fk);
-                    }
-                }
+        //        DBsyncTvEmptyType keys = new DBsyncTvEmptyType("Kľúče", DBsyncTreeview.KeysIcon);
+        //        novy.Nodes.Add(keys);
+        //        foreach (Columnn s in tab.Stlpce)
+        //        {
+        //            if (s.Is_primaryKey())
+        //            {
+        //                DbsyncTvKeyType pk = new DbsyncTvKeyType(s);
+        //                keys.Nodes.Add(pk);
+        //            }
+        //            if (s.Is_foreinKey())
+        //            {
+        //                DbsyncTvKeyType fk = new DbsyncTvKeyType(s);
+        //                keys.Nodes.Add(fk);
+        //            }
+        //        }
 
-                DBsyncTvEmptyType constr = new DBsyncTvEmptyType("Constrainty", DBsyncTreeview.ConstraintsIcon);
-                novy.Nodes.Add(constr);
-                if (tab.OdlisneConstrainty) constr.Azvyraznene = true; 
-                foreach (Constraintt c in tab.Constrainty)
-                {
-                    DbsyncTvConstraintType con = new DbsyncTvConstraintType(c);
-                    constr.Nodes.Add(con);
-                }
+        //        DBsyncTvEmptyType constr = new DBsyncTvEmptyType("Constrainty", DBsyncTreeview.ConstraintsIcon);
+        //        novy.Nodes.Add(constr);
+        //        if (tab.OdlisneConstrainty) constr.Azvyraznene = true; 
+        //        foreach (Constraintt c in tab.Constrainty)
+        //        {
+        //            DbsyncTvConstraintType con = new DbsyncTvConstraintType(c);
+        //            constr.Nodes.Add(con);
+        //        }
 
-                DBsyncTvEmptyType trig = new DBsyncTvEmptyType("Triggre", DBsyncTreeview.TriggersIcon);
-                novy.Nodes.Add(trig);
-                if (tab.OdlisneTrigre) trig.Azvyraznene = true; 
-                foreach (Trigger t in tab.Trigre)
-                {
-                    DbsyncTvTriggerType trg = new DbsyncTvTriggerType(t);
-                    trig.Nodes.Add(trg);
-                }
+        //        DBsyncTvEmptyType trig = new DBsyncTvEmptyType("Triggre", DBsyncTreeview.TriggersIcon);
+        //        novy.Nodes.Add(trig);
+        //        if (tab.OdlisneTrigre) trig.Azvyraznene = true; 
+        //        foreach (Trigger t in tab.Trigre)
+        //        {
+        //            DbsyncTvTriggerType trg = new DbsyncTvTriggerType(t);
+        //            trig.Nodes.Add(trg);
+        //        }
 
-                DBsyncTvEmptyType granty = new DBsyncTvEmptyType("Granty", DBsyncTreeview.GrantsIcon);
-                novy.Nodes.Add(granty);
-                if (tab.OdlisnePrivileges) granty.Azvyraznene = true; 
-                foreach (Privilege p in tab.Privileges)
-                {
-                    DbsyncTvPrivilegeType grnt = new DbsyncTvPrivilegeType(p);
-                    granty.Nodes.Add(grnt);
-                }
+        //        DBsyncTvEmptyType granty = new DBsyncTvEmptyType("Granty", DBsyncTreeview.GrantsIcon);
+        //        novy.Nodes.Add(granty);
+        //        if (tab.OdlisnePrivileges) granty.Azvyraznene = true; 
+        //        foreach (Privilege p in tab.Privileges)
+        //        {
+        //            DbsyncTvPrivilegeType grnt = new DbsyncTvPrivilegeType(p);
+        //            granty.Nodes.Add(grnt);
+        //        }
 
-                DBsyncTvEmptyType indexyy = new DBsyncTvEmptyType("Indexy", DBsyncTreeview.IndexesIcon);
-                novy.Nodes.Add(indexyy);
-                if (tab.OdlisneIndexy) indexyy.Azvyraznene = true; 
-                foreach (Index i in tab.Indexy)
-                {
-                    DbsyncTvIndexType iin = new DbsyncTvIndexType(i);
-                    indexyy.Nodes.Add(iin);
-                }
+        //        DBsyncTvEmptyType indexyy = new DBsyncTvEmptyType("Indexy", DBsyncTreeview.IndexesIcon);
+        //        novy.Nodes.Add(indexyy);
+        //        if (tab.OdlisneIndexy) indexyy.Azvyraznene = true; 
+        //        foreach (Index i in tab.Indexy)
+        //        {
+        //            DbsyncTvIndexType iin = new DbsyncTvIndexType(i);
+        //            indexyy.Nodes.Add(iin);
+        //        }
 
 
-                tabb.Nodes.Add(novy);
-            }
-            DBsyncTvEmptyType procedures = new DBsyncTvEmptyType("Stored procedures", DBsyncTreeview.StoredProceduresIcon);
-            hlavny.Nodes.Add(procedures);
-            foreach (SProcedure sp in procedury)
-            {
-                DbsyncTvStoredProcType novy = new DbsyncTvStoredProcType(sp);
-                procedures.Nodes.Add(novy);
-            }
-            DBsyncTvEmptyType funkc = new DBsyncTvEmptyType("Funkcie", DBsyncTreeview.FunctionsIcon);
-            hlavny.Nodes.Add(funkc);
-            foreach (SFunction sf in funkcie)
-            {
-                DbsyncTvFunctionType novy = new DbsyncTvFunctionType(sf);
-                funkc.Nodes.Add(novy);
-            }
+        //        tabb.Nodes.Add(novy);
+        //    }
+        //    DBsyncTvEmptyType procedures = new DBsyncTvEmptyType("Stored procedures", DBsyncTreeview.StoredProceduresIcon);
+        //    hlavny.Nodes.Add(procedures);
+        //    foreach (SProcedure sp in procedury)
+        //    {
+        //        DbsyncTvStoredProcType novy = new DbsyncTvStoredProcType(sp);
+        //        procedures.Nodes.Add(novy);
+        //    }
+        //    DBsyncTvEmptyType funkc = new DBsyncTvEmptyType("Funkcie", DBsyncTreeview.FunctionsIcon);
+        //    hlavny.Nodes.Add(funkc);
+        //    foreach (SFunction sf in funkcie)
+        //    {
+        //        DbsyncTvFunctionType novy = new DbsyncTvFunctionType(sf);
+        //        funkc.Nodes.Add(novy);
+        //    }
 
-            DBsyncTvEmptyType types = new DBsyncTvEmptyType("Typy", DBsyncTreeview.TypesIcon);
-            hlavny.Nodes.Add(types);
-            foreach (Typ tp in typy)
-            {
-                DbsyncTvTypeType novy = new DbsyncTvTypeType(tp);
-                types.Nodes.Add(novy);
-            }
-            DBsyncTvEmptyType users = new DBsyncTvEmptyType("Používatelia", DBsyncTreeview.UsersIcon);
-            hlavny.Nodes.Add(users);
-            foreach (User usr in usery)
-            {
-                DbsyncTvUserType novy = new DbsyncTvUserType(usr);
-                users.Nodes.Add(novy);
-            }
+        //    DBsyncTvEmptyType types = new DBsyncTvEmptyType("Typy", DBsyncTreeview.TypesIcon);
+        //    hlavny.Nodes.Add(types);
+        //    foreach (Typ tp in typy)
+        //    {
+        //        DbsyncTvTypeType novy = new DbsyncTvTypeType(tp);
+        //        types.Nodes.Add(novy);
+        //    }
+        //    DBsyncTvEmptyType users = new DBsyncTvEmptyType("Používatelia", DBsyncTreeview.UsersIcon);
+        //    hlavny.Nodes.Add(users);
+        //    foreach (User usr in usery)
+        //    {
+        //        DbsyncTvUserType novy = new DbsyncTvUserType(usr);
+        //        users.Nodes.Add(novy);
+        //    }
 
             
-            return hlavny;
-        }
+        //    return hlavny;
+        //}
     
         public bool porovnajTabulkyDB(List<Tablee> tabb)
         {

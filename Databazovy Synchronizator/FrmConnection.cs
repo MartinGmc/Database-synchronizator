@@ -72,7 +72,7 @@ namespace Databazovy_Synchronizator
                 ConnectionMSSQL con2 = new ConnectionMSSQL(textBox2.Text);
                 if (com.createConnections(con1, con2))
                 {
-                    MessageBox.Show("Pripojenie uspesne");
+                    MessageBox.Show("Connection succesfull");
                     DBsyncTreeview strom = com.vyrobStromA();
                     main.aktualizujIkonky(strom);
                     main.getTvDb1().Nodes.Add(strom);
@@ -82,7 +82,7 @@ namespace Databazovy_Synchronizator
                     main.getTvDb2().Nodes.Add(strom2);
                     this.Close();
                 }
-                else MessageBox.Show("Pripojenie neuspesne");
+                else MessageBox.Show("Connection was not succesfull");
                 
             }
             

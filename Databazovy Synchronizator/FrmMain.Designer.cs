@@ -99,6 +99,8 @@
             this.imageList1.Images.SetKeyName(19, "Funkcia.png");
             this.imageList1.Images.SetKeyName(20, "type1icon.png");
             this.imageList1.Images.SetKeyName(21, "user1.png");
+            this.imageList1.Images.SetKeyName(22, "Index1.png");
+            this.imageList1.Images.SetKeyName(23, "IndexIcon.png");
             // 
             // tvDb2
             // 

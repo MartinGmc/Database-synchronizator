@@ -1,0 +1,398 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Databazovy_Synchronizator.ColVal" Collapsed="true">
+    <Position X="30.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgAAIAAAACAAAAAAAAAAAAAAAAACAAAAAAAAAAAA=</HashCode>
+      <FileName>ColVal.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Databazovy_Synchronizator.Comparator" Collapsed="true">
+    <Position X="32.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AECYAAAAAQESBgAEDEAAAAAYIADLAAAAIQK2BAAAAAQ=</HashCode>
+      <FileName>Comparator.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Databazovy_Synchronizator.ComparatorOfSQL" Collapsed="true">
+    <Position X="34.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAIAgAABAIEAAQAEAAAABAAAAAAAAAAAAASAAA=</HashCode>
+      <FileName>ComparatorOfSQL.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Databazovy_Synchronizator.ComparatorSettings" Collapsed="true">
+    <Position X="36" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>YAIAAQACAAAAgAABAIAAAQAAAAAgAAACAAQAEEBEBQE=</HashCode>
+      <FileName>ComparatorSettings.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Databazovy_Synchronizator.DbSyncColumnDiff" Collapsed="true">
+    <Position X="29" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AwAwAAiIAAAAAAAEMgAAIEogCBAIIARCQABEQAAAAGg=</HashCode>
+      <FileName>diff triedy\DbSyncColumnDiff.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Databazovy_Synchronizator.DbSyncConstraintDiff" Collapsed="true">
+    <Position X="30.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAEAAIAAAAQAQCAAIAAAAAAAABBAAoAAAAAEIMAAAAA=</HashCode>
+      <FileName>diff triedy\DbSyncConstraintDiff.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Databazovy_Synchronizator.DbSyncDataBaseDiff" Collapsed="true">
+    <Position X="32.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QARAAgAAAAQEAAABgAkAAAEJAAEBAACAAICgoABEIAA=</HashCode>
+      <FileName>diff triedy\DbSyncDataBaseDiff.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Databazovy_Synchronizator.DbSyncFunctionDiff" Collapsed="true">
+    <Position X="34.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAAAABgAIAAwACAIkABAAIgAhAAAAAAgAQUAAAAAAQ=</HashCode>
+      <FileName>diff triedy\DbSyncFunctionDiff.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Databazovy_Synchronizator.DbSyncIndexDiff" Collapsed="true">
+    <Position X="36" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAACAAAQGAEIABgEAAgABAAAgAAAAAEAAABAAA=</HashCode>
+      <FileName>diff triedy\DbSyncIndexDiff.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Databazovy_Synchronizator.DbSyncKeyDiff" Collapsed="true">
+    <Position X="37.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAQAEAAAASAAAAIAAyICAAAAAAAgBAAAoEAACABAA=</HashCode>
+      <FileName>diff triedy\DbSyncKeyDiff.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Databazovy_Synchronizator.DbSyncPrivilegeDiff" Collapsed="true">
+    <Position X="39.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEAAAAAAAAAABAAIAIAAAgAgDAAAAAIAAAEAAChAAA=</HashCode>
+      <FileName>diff triedy\DbSyncPrivilegeDiff.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Databazovy_Synchronizator.DbSyncStoredProcedureDiff" Collapsed="true">
+    <Position X="29" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AGKAAgBgAAACQAAAIkABAAIwARAAMAAAgAQEEAAgAAQ=</HashCode>
+      <FileName>diff triedy\DbSyncStoredProcedureDiff.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Databazovy_Synchronizator.DbSyncTableDiff" Collapsed="true">
+    <Position X="30.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>kKbAApEwcAIFFFEMrBABKGYBABBMEQEAgSSgQREc8AQ=</HashCode>
+      <FileName>diff triedy\DbSyncTableDiff.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Databazovy_Synchronizator.DbSyncTriggerDiff" Collapsed="true">
+    <Position X="32.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AUARAABAAAAAQAAQIEIAARAABABAAAAAAgAEAAIAgAA=</HashCode>
+      <FileName>diff triedy\DbSyncTriggerDiff.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Databazovy_Synchronizator.DbSyncTypeDiff" Collapsed="true">
+    <Position X="34.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ICAABAAAAAAIAAAAYAQAAAAEIBAAAIAAAAAUCAAAAAg=</HashCode>
+      <FileName>diff triedy\DbSyncTypeDiff.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Databazovy_Synchronizator.DbSyncUserDiff" Collapsed="true">
+    <Position X="36" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAgAAAAAAAAAAAAAIAAAAAAICJAAAAiEQAAMAAUAAAA=</HashCode>
+      <FileName>diff triedy\DbSyncUserDiff.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Databazovy_Synchronizator.FrmConnection" Collapsed="true">
+    <Position X="37.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAAAAAAACAAAFAAAACAQQACAAAYAAAAEGAAAAAAAAQ=</HashCode>
+      <FileName>FrmConnection.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Databazovy_Synchronizator.MainFrm" Collapsed="true">
+    <Position X="36" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CCEMACEAACAAAwRAAACAAAD2AIAIQSABAHAMAAEAgAI=</HashCode>
+      <FileName>FrmMain.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Databazovy_Synchronizator.FrmSqlCode" Collapsed="true">
+    <Position X="39.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgAAAAAACQAAAAAAECAAAACEgAAAQAAAAAAAQASAAA=</HashCode>
+      <FileName>FrmSqlCode.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Databazovy_Synchronizator.FrmSqlShow" Collapsed="true">
+    <Position X="29" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAAAAAAASAAAgAAAACgQBAiAgAAAAAAAAAQAQAACAA=</HashCode>
+      <FileName>FrmSqlShow.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Databazovy_Synchronizator.FrmSynchronize" Collapsed="true">
+    <Position X="30.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>yABBBwAQAiRBBxMGJQGBCgJiAAgACQAQASAgIAAFhIA=</HashCode>
+      <FileName>FrmSynchronize.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Databazovy_Synchronizator.Connectionc" Collapsed="true">
+    <Position X="1.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AYCFAIgIAAECQhDECYCAAQECDIAAABSBDEIJCAEBCB0=</HashCode>
+      <FileName>pripojenie triedy\Connectionc.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Databazovy_Synchronizator.ConnectionMSSQL" Collapsed="true">
+    <Position X="0.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BKTFAYgAAAkCQhDEGYDIAYEmDIAAIByBDEMJCAEBKB0=</HashCode>
+      <FileName>pripojenie triedy\ConnectionMSSQL.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Databazovy_Synchronizator.ConnectionMySQL" Collapsed="true">
+    <Position X="2.75" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AKCFAIgAAAECQhDECYCAAQEiDIAAABSBDEIJCAEBCB0=</HashCode>
+      <FileName>pripojenie triedy\ConnectionMySQL.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Databazovy_Synchronizator.Program" Collapsed="true">
+    <Position X="29" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Databazovy_Synchronizator.SqlTextHighlited" Collapsed="true">
+    <Position X="37.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAABACAAAQAA=</HashCode>
+      <FileName>SqlTextHighlited.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Databazovy_Synchronizator.DBsyncTreeview" Collapsed="true">
+    <Position X="14" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QCEAopAAAAAIwCCcAEiAgAQIAACAABACEAgAQQAEAMA=</HashCode>
+      <FileName>treeview triedy\DBsyncTreeview.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Databazovy_Synchronizator.DbsyncTvColumnType" Collapsed="true">
+    <Position X="8.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAIAAAACAAAA=</HashCode>
+      <FileName>treeview triedy\DbsyncTvColumnType.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Databazovy_Synchronizator.DbsyncTvConstraintType" Collapsed="true">
+    <Position X="13" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAACAEAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>treeview triedy\DbsyncTvConstraintType.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Databazovy_Synchronizator.DBsyncTvEmptyType" Collapsed="true">
+    <Position X="17.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>treeview triedy\DBsyncTvEmptyType.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Databazovy_Synchronizator.DbsyncTvFunctionType" Collapsed="true">
+    <Position X="22" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAgAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>treeview triedy\DbsyncTvFunctionType.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Databazovy_Synchronizator.DbsyncTvIndexType" Collapsed="true">
+    <Position X="26.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAIAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>treeview triedy\DbsyncTvIndexType.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Databazovy_Synchronizator.DbsyncTvKeyType" Collapsed="true">
+    <Position X="1.75" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAgIAAAAAAAAA=</HashCode>
+      <FileName>treeview triedy\DbsyncTvKeyType.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Databazovy_Synchronizator.DbsyncTvPrivilegeType" Collapsed="true">
+    <Position X="4" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAABAAAAAAAA=</HashCode>
+      <FileName>treeview triedy\DbsyncTvPrivilegeType.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Databazovy_Synchronizator.DbsyncTvStoredProcType" Collapsed="true">
+    <Position X="6.25" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAgAAAAAA=</HashCode>
+      <FileName>treeview triedy\DbsyncTvStoredProcType.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Databazovy_Synchronizator.DBsyncTvTableType" Collapsed="true">
+    <Position X="10.75" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAAACAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>treeview triedy\DBsyncTvTableType.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Databazovy_Synchronizator.DbsyncTvTriggerType" Collapsed="true">
+    <Position X="15.25" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAEAAIAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>treeview triedy\DbsyncTvTriggerType.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Databazovy_Synchronizator.DbsyncTvTypeType" Collapsed="true">
+    <Position X="19.75" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAQAAAAAAAA=</HashCode>
+      <FileName>treeview triedy\DbsyncTvTypeType.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Databazovy_Synchronizator.DbsyncTvUserType" Collapsed="true">
+    <Position X="24.25" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAIAAAAAAAA=</HashCode>
+      <FileName>treeview triedy\DbsyncTvUserType.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Databazovy_Synchronizator.Columnn" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="29" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QEAAgQAACACJABAEIACIAAAAAAQAAgIASgAlAAAAhAQ=</HashCode>
+      <FileName>zakladne triedy\Columnn.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Databazovy_Synchronizator.Constraintt" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="24" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAYAQCQCAAAAAAABAAEAAQAAAAAAAAAAEAACAAAA=</HashCode>
+      <FileName>zakladne triedy\Constraintt.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Databazovy_Synchronizator.DataBasee" Collapsed="true">
+    <Position X="39.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAABQEAAAAhAQGgIAAAJAAAAAIAEBAAADAAIwgwAYA=</HashCode>
+      <FileName>zakladne triedy\DataBasee.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Databazovy_Synchronizator.Index" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="22" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAAAACAAAAAAAAAAAAAQAgAAFAIAACQAEAAgAAQA=</HashCode>
+      <FileName>zakladne triedy\Index.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Databazovy_Synchronizator.Key" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="24" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIACAAICAEAAAAAAAIACAAAAAAAAAAAAAiEAQAAgAA=</HashCode>
+      <FileName>zakladne triedy\Key.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Databazovy_Synchronizator.ObjectAtribute" Collapsed="true">
+    <Position X="37.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAIAAAACAAAAAABAAAAAAAEAAACBAABAgAAAAAA=</HashCode>
+      <FileName>zakladne triedy\ObjectAtribute.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Databazovy_Synchronizator.Privilege" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="22" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAACACAAAgEAAAABAAQAAAAEAAAAAAAAEAAAAAAA=</HashCode>
+      <FileName>zakladne triedy\Privilege.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Databazovy_Synchronizator.SFunction" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="20.75" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAAAABICAgABAAIAAAAAAAAAAAACAAAAAgEAAAEAAA=</HashCode>
+      <FileName>zakladne triedy\SFunction.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Databazovy_Synchronizator.SProcedure" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="24" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAICAAAAACAAAAAgAAAAAAACAAAAAgkAAAAIAA=</HashCode>
+      <FileName>zakladne triedy\SProcedure.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Databazovy_Synchronizator.Tablee" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="26" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAAEgDICRAYgAMUCQADAAECAgBAAAMAQAEEAAABAAI=</HashCode>
+      <FileName>zakladne triedy\Tablee.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Databazovy_Synchronizator.Trigger" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="24" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAAACAACAQAAMAEAADCAABAAkAACABAAAgEAABAAAA=</HashCode>
+      <FileName>zakladne triedy\Trigger.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Databazovy_Synchronizator.Typ" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="26" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BUAAAARACAAAAAAAAAIAAAACAAAAAAAAAAAUAAEAEAA=</HashCode>
+      <FileName>zakladne triedy\Typ.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Databazovy_Synchronizator.User" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="26" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAAAAAgCAAAAAAAAQAAAAEAAAAAAAAAAQBUAAEAEAA=</HashCode>
+      <FileName>zakladne triedy\User.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.232" />
+  </Class>
+  <Class Name="Databazovy_Synchronizator.Properties.Resources" Collapsed="true">
+    <Position X="30.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAABEAAAAQAAAAAAAAAAAAAAAIA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Databazovy_Synchronizator.Properties.Settings" Collapsed="true">
+    <Position X="32.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAIAAAAAABAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="Databazovy_Synchronizator.IDbsyncCompare&lt;Objj&gt;" Collapsed="true">
+    <Position X="24" Y="3" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAA=</HashCode>
+      <FileName>zakladne triedy\IDbsyncCompare.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

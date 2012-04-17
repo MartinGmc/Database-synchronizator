@@ -81,20 +81,20 @@ namespace Databazovy_Synchronizator
                     columnAtributesListA.Add(new ObjectAtribute("Coulumn default", ColumnA.COULUMN_DEFAULT1, true));
                     columnAtributesListA.Add(new ObjectAtribute("Datatype", ColumnA.DATA_TYPE1, true));
                     columnAtributesListA.Add(new ObjectAtribute("Date Time Precision", ColumnA.DATETIME_PRECISION1, true));
-                    columnAtributesListA.Add(new ObjectAtribute("Character set catalog", ColumnA.CHARACTER_SET_CATALOG1, true));
-                    columnAtributesListA.Add(new ObjectAtribute("Character set name", ColumnA.CHARACTER_SET_NAME1, true));
-                    columnAtributesListA.Add(new ObjectAtribute("Character set schema", ColumnA.CHARACTER_SET_SCHEMA1, true));
-                    columnAtributesListA.Add(new ObjectAtribute("Character max length", ColumnA.CHARACTER_MAXIMUM_LENGTH1, true));
-                    columnAtributesListA.Add(new ObjectAtribute("Character octet length", ColumnA.CHARACTER_OCTET_LENGTH1, true));
+                    //columnAtributesListA.Add(new ObjectAtribute("Character set catalog", ColumnA.CHARACTER_SET_CATALOG1, true));
+                    //columnAtributesListA.Add(new ObjectAtribute("Character set name", ColumnA.CHARACTER_SET_NAME1, true));
+                    //columnAtributesListA.Add(new ObjectAtribute("Character set schema", ColumnA.CHARACTER_SET_SCHEMA1, true));
+                    //columnAtributesListA.Add(new ObjectAtribute("Character max length", ColumnA.CHARACTER_MAXIMUM_LENGTH1, true));
+                    //columnAtributesListA.Add(new ObjectAtribute("Character octet length", ColumnA.CHARACTER_OCTET_LENGTH1, true));
                     columnAtributesListA.Add(new ObjectAtribute("Is nullable", ColumnA.IS_NULLABLE1, true));
                     columnAtributesListA.Add(new ObjectAtribute("Numeric precision", ColumnA.NUMERIC_PRECISION1, true));
                     columnAtributesListA.Add(new ObjectAtribute("Numeric scale", ColumnA.NUMERIC_SCALE1, true));
-                    columnAtributesListA.Add(new ObjectAtribute("Name of fk Column", ColumnA.FK_NameOFPKCol, true));
-                    columnAtributesListA.Add(new ObjectAtribute("Name of fk Tab", ColumnA.FK_nameOFPKTab, true));
-                    columnAtributesListA.Add(new ObjectAtribute("Is forein Key", ColumnA.Is_foreinKey().ToString(), true));
-                    columnAtributesListA.Add(new ObjectAtribute("Is primary Key", ColumnA.Is_primaryKey().ToString(), true));
-                    columnAtributesListA.Add(new ObjectAtribute("Name of Fk", ColumnA.Name_of_FK, true));
-                    columnAtributesListA.Add(new ObjectAtribute("Name of pk", ColumnA.Name_of_PK, true));
+                    //columnAtributesListA.Add(new ObjectAtribute("Name of fk Column", ColumnA.FK_NameOFPKCol, true));
+                    //columnAtributesListA.Add(new ObjectAtribute("Name of fk Tab", ColumnA.FK_nameOFPKTab, true));
+                    //columnAtributesListA.Add(new ObjectAtribute("Is forein Key", ColumnA.Is_foreinKey().ToString(), true));
+                    //columnAtributesListA.Add(new ObjectAtribute("Is primary Key", ColumnA.Is_primaryKey().ToString(), true));
+                    //columnAtributesListA.Add(new ObjectAtribute("Name of Fk", ColumnA.Name_of_FK, true));
+                    //columnAtributesListA.Add(new ObjectAtribute("Name of pk", ColumnA.Name_of_PK, true));
                 }
                 else if (ColumnB != null)
                 {
@@ -103,20 +103,20 @@ namespace Databazovy_Synchronizator
                     columnAtributesListB.Add(new ObjectAtribute("Coulumn default", ColumnB.COULUMN_DEFAULT1, true));
                     columnAtributesListB.Add(new ObjectAtribute("Datatype", ColumnB.DATA_TYPE1, true));
                     columnAtributesListB.Add(new ObjectAtribute("Date Time Precision", ColumnB.DATETIME_PRECISION1, true));
-                    columnAtributesListB.Add(new ObjectAtribute("Character set catalog", ColumnB.CHARACTER_SET_CATALOG1, true));
-                    columnAtributesListB.Add(new ObjectAtribute("Character set name", ColumnB.CHARACTER_SET_NAME1, true));
-                    columnAtributesListB.Add(new ObjectAtribute("Character set schema", ColumnB.CHARACTER_SET_SCHEMA1, true));
-                    columnAtributesListB.Add(new ObjectAtribute("Character max length", ColumnB.CHARACTER_MAXIMUM_LENGTH1, true));
-                    columnAtributesListB.Add(new ObjectAtribute("Character octet length", ColumnB.CHARACTER_OCTET_LENGTH1, true));
+                    //columnAtributesListB.Add(new ObjectAtribute("Character set catalog", ColumnB.CHARACTER_SET_CATALOG1, true));
+                    //columnAtributesListB.Add(new ObjectAtribute("Character set name", ColumnB.CHARACTER_SET_NAME1, true));
+                    //columnAtributesListB.Add(new ObjectAtribute("Character set schema", ColumnB.CHARACTER_SET_SCHEMA1, true));
+                    //columnAtributesListB.Add(new ObjectAtribute("Character max length", ColumnB.CHARACTER_MAXIMUM_LENGTH1, true));
+                    //columnAtributesListB.Add(new ObjectAtribute("Character octet length", ColumnB.CHARACTER_OCTET_LENGTH1, true));
                     columnAtributesListB.Add(new ObjectAtribute("Is nullable", ColumnB.IS_NULLABLE1, true));
                     columnAtributesListB.Add(new ObjectAtribute("Numeric precision", ColumnB.NUMERIC_PRECISION1, true));
                     columnAtributesListB.Add(new ObjectAtribute("Numeric scale", ColumnB.NUMERIC_SCALE1, true));
-                    columnAtributesListB.Add(new ObjectAtribute("Name of fk Column", ColumnB.FK_NameOFPKCol, true));
-                    columnAtributesListB.Add(new ObjectAtribute("Name of fk Tab", ColumnB.FK_nameOFPKTab, true));
-                    columnAtributesListB.Add(new ObjectAtribute("Is forein Key", ColumnB.Is_foreinKey().ToString(), true));
-                    columnAtributesListB.Add(new ObjectAtribute("Is primary Key", ColumnB.Is_primaryKey().ToString(), true));
-                    columnAtributesListB.Add(new ObjectAtribute("Name of Fk", ColumnB.Name_of_FK, true));
-                    columnAtributesListB.Add(new ObjectAtribute("Name of pk", ColumnB.Name_of_PK, true));
+                    //columnAtributesListB.Add(new ObjectAtribute("Name of fk Column", ColumnB.FK_NameOFPKCol, true));
+                    //columnAtributesListB.Add(new ObjectAtribute("Name of fk Tab", ColumnB.FK_nameOFPKTab, true));
+                    //columnAtributesListB.Add(new ObjectAtribute("Is forein Key", ColumnB.Is_foreinKey().ToString(), true));
+                    //columnAtributesListB.Add(new ObjectAtribute("Is primary Key", ColumnB.Is_primaryKey().ToString(), true));
+                    //columnAtributesListB.Add(new ObjectAtribute("Name of Fk", ColumnB.Name_of_FK, true));
+                    //columnAtributesListB.Add(new ObjectAtribute("Name of pk", ColumnB.Name_of_PK, true));
                 }
                 else this.columnName = "UNDEFINED";
             }
@@ -127,24 +127,24 @@ namespace Databazovy_Synchronizator
                 if (ColumnA.COULUMN_NAME1 != ColumnB.COULUMN_NAME1) diffColumnName = true;
                 if (ColumnA.DATA_TYPE1 != ColumnB.DATA_TYPE1) diffDatatype = true;
                 if (ColumnA.DATETIME_PRECISION1 != ColumnB.DATETIME_PRECISION1) diffDatetimePrecision = true;
-                if (ColumnA.FK_NameOFPKCol != ColumnB.FK_NameOFPKCol) diffFkNameOfPkCol = true;
-                if (ColumnA.FK_nameOFPKTab != ColumnB.FK_nameOFPKTab) diffFkNameOfPKTab = true;
+                //if (ColumnA.FK_NameOFPKCol != ColumnB.FK_NameOFPKCol) diffFkNameOfPkCol = true;
+                //if (ColumnA.FK_nameOFPKTab != ColumnB.FK_nameOFPKTab) diffFkNameOfPKTab = true;
                 if (ColumnA.CHARACTER_MAXIMUM_LENGTH1 != ColumnB.CHARACTER_MAXIMUM_LENGTH1) diffCharMaxLength = true;
-                if (ColumnA.CHARACTER_OCTET_LENGTH1 != ColumnB.CHARACTER_OCTET_LENGTH1) diffCharOctetLength = true;
-                if (ColumnA.CHARACTER_SET_CATALOG1 != ColumnB.CHARACTER_SET_CATALOG1) diffCharacterSetCatalog = true;
-                if (ColumnA.CHARACTER_SET_NAME1 != ColumnB.CHARACTER_SET_NAME1) diffCharacterSetName = true;
-                if (ColumnA.CHARACTER_SET_SCHEMA1 != ColumnB.CHARACTER_SET_SCHEMA1) diffCharacterSetSchema = true;
+                //if (ColumnA.CHARACTER_OCTET_LENGTH1 != ColumnB.CHARACTER_OCTET_LENGTH1) diffCharOctetLength = true;
+                //if (ColumnA.CHARACTER_SET_CATALOG1 != ColumnB.CHARACTER_SET_CATALOG1) diffCharacterSetCatalog = true;
+                //if (ColumnA.CHARACTER_SET_NAME1 != ColumnB.CHARACTER_SET_NAME1) diffCharacterSetName = true;
+                //if (ColumnA.CHARACTER_SET_SCHEMA1 != ColumnB.CHARACTER_SET_SCHEMA1) diffCharacterSetSchema = true;
                 if (ColumnA.IS_NULLABLE1 != ColumnB.IS_NULLABLE1) diffIsNullable = true;
-                if (ColumnA.Name_of_FK != ColumnB.Name_of_FK) diffNameOfFK = true;
-                if (ColumnA.Name_of_PK != ColumnB.Name_of_PK) diffNameOfPk = true;
+                //if (ColumnA.Name_of_FK != ColumnB.Name_of_FK) diffNameOfFK = true;
+                //if (ColumnA.Name_of_PK != ColumnB.Name_of_PK) diffNameOfPk = true;
                 //if (ColumnA.NazovStlpca != ColumnB.NazovStlpca) diffNameOfColumn = true;
                 //if (ColumnA.NUMERIC_PRECISION_RADIX1 != ColumnB.NUMERIC_PRECISION_RADIX1) diffNumericPRecisionRadix = true;
                 if (ColumnA.NUMERIC_PRECISION1 != ColumnB.NUMERIC_PRECISION1) diffNumericPrecision = true;
                 if (ColumnA.NUMERIC_SCALE1 != ColumnB.NUMERIC_SCALE1) diffNumericScale = true;
                // if (ColumnA.ORDINAL_POSITION1 != ColumnB.ORDINAL_POSITION1) diffOrdinalPosition = true;
                 //if (ColumnA.TABLE_NAME1 != ColumnB.TABLE_NAME1) diffTableName = true;
-                if (ColumnA.Is_foreinKey() != ColumnB.Is_foreinKey()) diffIsForeinKey = true;
-                if (ColumnA.Is_primaryKey() != ColumnB.Is_primaryKey()) diffIsPrimarykey = true;
+                //if (ColumnA.Is_foreinKey() != ColumnB.Is_foreinKey()) diffIsForeinKey = true;
+                //if (ColumnA.Is_primaryKey() != ColumnB.Is_primaryKey()) diffIsPrimarykey = true;
 
                 if (diffColumnDefault || diffColumnName || diffDatatype || diffDatetimePrecision || diffFkNameOfPkCol || diffFkNameOfPKTab || diffCharacterSetCatalog || diffCharacterSetName || diffCharacterSetSchema || diffCharMaxLength || diffCharOctetLength || diffIsForeinKey || diffIsNullable || diffIsPrimarykey || diffNameOfColumn || diffNameOfFK || diffNameOfPk || diffNumericPrecision || diffNumericScale ) different = true;
                 else different = false;
@@ -198,47 +198,47 @@ namespace Databazovy_Synchronizator
                     columnAtributesListB.Add(cDateTimePrecision);
                 }
 
-                if (diffCharacterSetCatalog)
-                {
-                    ObjectAtribute cCheracterSetCatA = new ObjectAtribute("Character set catalog ", ColumnA.CHARACTER_SET_CATALOG1, true);
-                    columnAtributesListA.Add(cCheracterSetCatA);
-                    ObjectAtribute cCheracterSetCatB = new ObjectAtribute("Character set catalog ", ColumnB.CHARACTER_SET_CATALOG1, true);
-                    columnAtributesListB.Add(cCheracterSetCatB);
-                }
-                else
-                {
-                    ObjectAtribute cCheracterSetCat = new ObjectAtribute("Character set catalog ", ColumnA.CHARACTER_SET_CATALOG1, false);
-                    columnAtributesListA.Add(cCheracterSetCat);
-                    columnAtributesListB.Add(cCheracterSetCat);
-                }
+                //if (diffCharacterSetCatalog)
+                //{
+                //    ObjectAtribute cCheracterSetCatA = new ObjectAtribute("Character set catalog ", ColumnA.CHARACTER_SET_CATALOG1, true);
+                //    columnAtributesListA.Add(cCheracterSetCatA);
+                //    ObjectAtribute cCheracterSetCatB = new ObjectAtribute("Character set catalog ", ColumnB.CHARACTER_SET_CATALOG1, true);
+                //    columnAtributesListB.Add(cCheracterSetCatB);
+                //}
+                //else
+                //{
+                //    ObjectAtribute cCheracterSetCat = new ObjectAtribute("Character set catalog ", ColumnA.CHARACTER_SET_CATALOG1, false);
+                //    columnAtributesListA.Add(cCheracterSetCat);
+                //    columnAtributesListB.Add(cCheracterSetCat);
+                //}
 
-                if (diffCharacterSetName)
-                {
-                    ObjectAtribute cCharacterSetNameA = new ObjectAtribute("Character set name ", ColumnA.CHARACTER_SET_NAME1, true);
-                    columnAtributesListA.Add(cCharacterSetNameA);
-                    ObjectAtribute cCharacterSetNameB = new ObjectAtribute("Character set name", ColumnB.CHARACTER_SET_NAME1, true);
-                    columnAtributesListB.Add(cCharacterSetNameB);
-                }
-                else
-                {
-                    ObjectAtribute cCheracterSetCat = new ObjectAtribute("Character set name ", ColumnA.CHARACTER_SET_NAME1, false);
-                    columnAtributesListA.Add(cCheracterSetCat);
-                    columnAtributesListB.Add(cCheracterSetCat);
-                }
+                //if (diffCharacterSetName)
+                //{
+                //    ObjectAtribute cCharacterSetNameA = new ObjectAtribute("Character set name ", ColumnA.CHARACTER_SET_NAME1, true);
+                //    columnAtributesListA.Add(cCharacterSetNameA);
+                //    ObjectAtribute cCharacterSetNameB = new ObjectAtribute("Character set name", ColumnB.CHARACTER_SET_NAME1, true);
+                //    columnAtributesListB.Add(cCharacterSetNameB);
+                //}
+                //else
+                //{
+                //    ObjectAtribute cCheracterSetCat = new ObjectAtribute("Character set name ", ColumnA.CHARACTER_SET_NAME1, false);
+                //    columnAtributesListA.Add(cCheracterSetCat);
+                //    columnAtributesListB.Add(cCheracterSetCat);
+                //}
 
-                if (diffCharacterSetSchema)
-                {
-                    ObjectAtribute cCharacterSetSchemaA = new ObjectAtribute("Character set schema ", ColumnA.CHARACTER_SET_SCHEMA1, true);
-                    columnAtributesListA.Add(cCharacterSetSchemaA);
-                    ObjectAtribute cCharacterSetSchemaB = new ObjectAtribute("Character set schema", ColumnB.CHARACTER_SET_SCHEMA1, true);
-                    columnAtributesListB.Add(cCharacterSetSchemaB);
-                }
-                else
-                {
-                    ObjectAtribute cCharacterSetSchema = new ObjectAtribute("Character set schema", ColumnA.CHARACTER_SET_SCHEMA1, false);
-                    columnAtributesListA.Add(cCharacterSetSchema);
-                    columnAtributesListB.Add(cCharacterSetSchema);
-                }
+                //if (diffCharacterSetSchema)
+                //{
+                //    ObjectAtribute cCharacterSetSchemaA = new ObjectAtribute("Character set schema ", ColumnA.CHARACTER_SET_SCHEMA1, true);
+                //    columnAtributesListA.Add(cCharacterSetSchemaA);
+                //    ObjectAtribute cCharacterSetSchemaB = new ObjectAtribute("Character set schema", ColumnB.CHARACTER_SET_SCHEMA1, true);
+                //    columnAtributesListB.Add(cCharacterSetSchemaB);
+                //}
+                //else
+                //{
+                //    ObjectAtribute cCharacterSetSchema = new ObjectAtribute("Character set schema", ColumnA.CHARACTER_SET_SCHEMA1, false);
+                //    columnAtributesListA.Add(cCharacterSetSchema);
+                //    columnAtributesListB.Add(cCharacterSetSchema);
+                //}
 
                 if (diffCharMaxLength)
                 {
@@ -254,19 +254,19 @@ namespace Databazovy_Synchronizator
                     columnAtributesListB.Add(cCharacterMaxLEngth);
                 }
 
-                 if (diffCharOctetLength)
-                {
-                    ObjectAtribute cCharacterOctetLEngthA = new ObjectAtribute("Character octet length ", ColumnA.CHARACTER_OCTET_LENGTH1, true);
-                    columnAtributesListA.Add(cCharacterOctetLEngthA);
-                    ObjectAtribute cCharacterOctetLEngthB = new ObjectAtribute("Character octet length ", ColumnB.CHARACTER_OCTET_LENGTH1, true);
-                    columnAtributesListB.Add(cCharacterOctetLEngthB);
-                }
-                else
-                {
-                    ObjectAtribute cCharacterOctetLEngth = new ObjectAtribute("Character octet length ", ColumnA.CHARACTER_OCTET_LENGTH1, false);
-                    columnAtributesListA.Add(cCharacterOctetLEngth);
-                    columnAtributesListB.Add(cCharacterOctetLEngth);
-                }
+                // if (diffCharOctetLength)
+                //{
+                //    ObjectAtribute cCharacterOctetLEngthA = new ObjectAtribute("Character octet length ", ColumnA.CHARACTER_OCTET_LENGTH1, true);
+                //    columnAtributesListA.Add(cCharacterOctetLEngthA);
+                //    ObjectAtribute cCharacterOctetLEngthB = new ObjectAtribute("Character octet length ", ColumnB.CHARACTER_OCTET_LENGTH1, true);
+                //    columnAtributesListB.Add(cCharacterOctetLEngthB);
+                //}
+                //else
+                //{
+                //    ObjectAtribute cCharacterOctetLEngth = new ObjectAtribute("Character octet length ", ColumnA.CHARACTER_OCTET_LENGTH1, false);
+                //    columnAtributesListA.Add(cCharacterOctetLEngth);
+                //    columnAtributesListB.Add(cCharacterOctetLEngth);
+                //}
 
                 if (diffIsNullable)
                 {
@@ -314,89 +314,89 @@ namespace Databazovy_Synchronizator
 
                
 
-                if (diffFkNameOfPkCol)
-                {
-                    ObjectAtribute cNameOfPkColA = new ObjectAtribute("Name of fk Column ", ColumnA.FK_NameOFPKCol, true);
-                    columnAtributesListA.Add(cNameOfPkColA);
-                    ObjectAtribute cNameOfPkColB = new ObjectAtribute("Name of fk Column ", ColumnB.FK_NameOFPKCol, true);
-                    columnAtributesListB.Add(cNameOfPkColB);
-                }
-                else
-                {
-                    ObjectAtribute cNameOfPkCol = new ObjectAtribute("Name of fk Column ", ColumnA.FK_NameOFPKCol, false);
-                    columnAtributesListA.Add(cNameOfPkCol);
-                    columnAtributesListB.Add(cNameOfPkCol);
-                }
+                //if (diffFkNameOfPkCol)
+                //{
+                //    ObjectAtribute cNameOfPkColA = new ObjectAtribute("Name of fk Column ", ColumnA.FK_NameOFPKCol, true);
+                //    columnAtributesListA.Add(cNameOfPkColA);
+                //    ObjectAtribute cNameOfPkColB = new ObjectAtribute("Name of fk Column ", ColumnB.FK_NameOFPKCol, true);
+                //    columnAtributesListB.Add(cNameOfPkColB);
+                //}
+                //else
+                //{
+                //    ObjectAtribute cNameOfPkCol = new ObjectAtribute("Name of fk Column ", ColumnA.FK_NameOFPKCol, false);
+                //    columnAtributesListA.Add(cNameOfPkCol);
+                //    columnAtributesListB.Add(cNameOfPkCol);
+                //}
 
-                if (diffFkNameOfPKTab)
-                {
-                    ObjectAtribute cNameOfPkTabA = new ObjectAtribute("Name of fk Tab ", ColumnA.FK_nameOFPKTab, true);
-                    columnAtributesListA.Add(cNameOfPkTabA);
-                    ObjectAtribute cNameOfPkTabB = new ObjectAtribute("Name of fk Tab ", ColumnB.FK_nameOFPKTab, true);
-                    columnAtributesListB.Add(cNameOfPkTabB);
-                }
-                else
-                {
-                    ObjectAtribute cNameOfPkTab = new ObjectAtribute("Name of fk Tab ", ColumnA.FK_nameOFPKTab, false);
-                    columnAtributesListA.Add(cNameOfPkTab);
-                    columnAtributesListB.Add(cNameOfPkTab);
-                }
+                //if (diffFkNameOfPKTab)
+                //{
+                //    ObjectAtribute cNameOfPkTabA = new ObjectAtribute("Name of fk Tab ", ColumnA.FK_nameOFPKTab, true);
+                //    columnAtributesListA.Add(cNameOfPkTabA);
+                //    ObjectAtribute cNameOfPkTabB = new ObjectAtribute("Name of fk Tab ", ColumnB.FK_nameOFPKTab, true);
+                //    columnAtributesListB.Add(cNameOfPkTabB);
+                //}
+                //else
+                //{
+                //    ObjectAtribute cNameOfPkTab = new ObjectAtribute("Name of fk Tab ", ColumnA.FK_nameOFPKTab, false);
+                //    columnAtributesListA.Add(cNameOfPkTab);
+                //    columnAtributesListB.Add(cNameOfPkTab);
+                //}
 
-                if (diffIsForeinKey)
-                {
-                    ObjectAtribute cIsForeinKeyA = new ObjectAtribute("Is forein Key ", ColumnA.Is_foreinKey().ToString(), true);
-                    columnAtributesListA.Add(cIsForeinKeyA);
-                    ObjectAtribute cIsForeinKeyB = new ObjectAtribute("Is forein Key ", ColumnB.Is_foreinKey().ToString(), true);
-                    columnAtributesListB.Add(cIsForeinKeyB);
-                }
-                else
-                {
-                    ObjectAtribute cIsForeinKey = new ObjectAtribute("Is forein Key ", ColumnA.Is_foreinKey().ToString(), false);
-                    columnAtributesListA.Add(cIsForeinKey);
-                    columnAtributesListB.Add(cIsForeinKey);
-                }
+                //if (diffIsForeinKey)
+                //{
+                //    ObjectAtribute cIsForeinKeyA = new ObjectAtribute("Is forein Key ", ColumnA.Is_foreinKey().ToString(), true);
+                //    columnAtributesListA.Add(cIsForeinKeyA);
+                //    ObjectAtribute cIsForeinKeyB = new ObjectAtribute("Is forein Key ", ColumnB.Is_foreinKey().ToString(), true);
+                //    columnAtributesListB.Add(cIsForeinKeyB);
+                //}
+                //else
+                //{
+                //    ObjectAtribute cIsForeinKey = new ObjectAtribute("Is forein Key ", ColumnA.Is_foreinKey().ToString(), false);
+                //    columnAtributesListA.Add(cIsForeinKey);
+                //    columnAtributesListB.Add(cIsForeinKey);
+                //}
 
-                if (diffIsPrimarykey)
-                {
-                    ObjectAtribute cIsPrimaryKeyA = new ObjectAtribute("Is primary Key ", ColumnA.Is_primaryKey().ToString(), true);
-                    columnAtributesListA.Add(cIsPrimaryKeyA);
-                    ObjectAtribute cIsPrimaryKeyB = new ObjectAtribute("Is primary Key ", ColumnB.Is_primaryKey().ToString(), true);
-                    columnAtributesListB.Add(cIsPrimaryKeyB);
-                }
-                else
-                {
-                    ObjectAtribute cIsPrimaryKey = new ObjectAtribute("Is primary Key ", ColumnA.Is_primaryKey().ToString(), false);
-                    columnAtributesListA.Add(cIsPrimaryKey);
-                    columnAtributesListB.Add(cIsPrimaryKey);
-                }
+                //if (diffIsPrimarykey)
+                //{
+                //    ObjectAtribute cIsPrimaryKeyA = new ObjectAtribute("Is primary Key ", ColumnA.Is_primaryKey().ToString(), true);
+                //    columnAtributesListA.Add(cIsPrimaryKeyA);
+                //    ObjectAtribute cIsPrimaryKeyB = new ObjectAtribute("Is primary Key ", ColumnB.Is_primaryKey().ToString(), true);
+                //    columnAtributesListB.Add(cIsPrimaryKeyB);
+                //}
+                //else
+                //{
+                //    ObjectAtribute cIsPrimaryKey = new ObjectAtribute("Is primary Key ", ColumnA.Is_primaryKey().ToString(), false);
+                //    columnAtributesListA.Add(cIsPrimaryKey);
+                //    columnAtributesListB.Add(cIsPrimaryKey);
+                //}
                 
-                if (diffNameOfFK)
-                {
-                    ObjectAtribute cNameOfFkA = new ObjectAtribute("Name of Fk ", ColumnA.Name_of_FK, true);
-                    columnAtributesListA.Add(cNameOfFkA);
-                    ObjectAtribute cNameOfFkB = new ObjectAtribute("Name of Fk ", ColumnB.Name_of_FK, true);
-                    columnAtributesListB.Add(cNameOfFkB);
-                }
-                else
-                {
-                    ObjectAtribute cNameOfFk = new ObjectAtribute("Name of Fk ", ColumnA.Name_of_FK, false);
-                    columnAtributesListA.Add(cNameOfFk);
-                    columnAtributesListB.Add(cNameOfFk);
-                }
+                //if (diffNameOfFK)
+                //{
+                //    ObjectAtribute cNameOfFkA = new ObjectAtribute("Name of Fk ", ColumnA.Name_of_FK, true);
+                //    columnAtributesListA.Add(cNameOfFkA);
+                //    ObjectAtribute cNameOfFkB = new ObjectAtribute("Name of Fk ", ColumnB.Name_of_FK, true);
+                //    columnAtributesListB.Add(cNameOfFkB);
+                //}
+                //else
+                //{
+                //    ObjectAtribute cNameOfFk = new ObjectAtribute("Name of Fk ", ColumnA.Name_of_FK, false);
+                //    columnAtributesListA.Add(cNameOfFk);
+                //    columnAtributesListB.Add(cNameOfFk);
+                //}
 
-                if (diffNameOfPk)
-                {
-                    ObjectAtribute cNameOfPkA = new ObjectAtribute("Name of pk ", ColumnA.Name_of_PK, true);
-                    columnAtributesListA.Add(cNameOfPkA);
-                    ObjectAtribute cNameOfPkB = new ObjectAtribute("Name of pk ", ColumnB.Name_of_PK, true);
-                    columnAtributesListB.Add(cNameOfPkB);
-                }
-                else
-                {
-                    ObjectAtribute cNameOfPk = new ObjectAtribute("Name of pk ", ColumnA.Name_of_PK, false);
-                    columnAtributesListA.Add(cNameOfPk);
-                    columnAtributesListB.Add(cNameOfPk);
-                }
+                //if (diffNameOfPk)
+                //{
+                //    ObjectAtribute cNameOfPkA = new ObjectAtribute("Name of pk ", ColumnA.Name_of_PK, true);
+                //    columnAtributesListA.Add(cNameOfPkA);
+                //    ObjectAtribute cNameOfPkB = new ObjectAtribute("Name of pk ", ColumnB.Name_of_PK, true);
+                //    columnAtributesListB.Add(cNameOfPkB);
+                //}
+                //else
+                //{
+                //    ObjectAtribute cNameOfPk = new ObjectAtribute("Name of pk ", ColumnA.Name_of_PK, false);
+                //    columnAtributesListA.Add(cNameOfPk);
+                //    columnAtributesListB.Add(cNameOfPk);
+                //}
 
 
 

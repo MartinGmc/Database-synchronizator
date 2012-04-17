@@ -10,21 +10,21 @@ namespace Databazovy_Synchronizator
         private Columnn s;
         private Key k;
 
-        public DbsyncTvKeyType(Columnn stl)
-        {
-            this.s = stl;
-            if (s.Is_primaryKey())
-            {
-                this.Text = stl.Name_of_PK;
-                this.typIkony = PrimaryKeyIcon;
-            }
-            if (s.Is_foreinKey())
-            {
-                this.Text = stl.Name_of_FK;
-                this.typIkony = ForeinKeyIcon;
-            }
+        //public DbsyncTvKeyType(Columnn stl)
+        //{
+        //    this.s = stl;
+        //    if (s.Is_primaryKey())
+        //    {
+        //        this.Text = stl.Name_of_PK;
+        //        this.typIkony = PrimaryKeyIcon;
+        //    }
+        //    if (s.Is_foreinKey())
+        //    {
+        //        this.Text = stl.Name_of_FK;
+        //        this.typIkony = ForeinKeyIcon;
+        //    }
 
-        }
+        //}
 
         public DbsyncTvKeyType(Key kIn)
         {

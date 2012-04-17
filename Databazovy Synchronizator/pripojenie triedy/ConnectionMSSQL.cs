@@ -309,10 +309,10 @@ namespace Databazovy_Synchronizator
 				st.DATA_TYPE1 = red["DATA_TYPE"].ToString();
 				st.DATETIME_PRECISION1 = red["DATETIME_PRECISION"].ToString();
 				st.CHARACTER_MAXIMUM_LENGTH1 = red["CHARACTER_MAXIMUM_LENGTH"].ToString();
-				st.CHARACTER_OCTET_LENGTH1 = red["CHARACTER_OCTET_LENGTH"].ToString();
-				st.CHARACTER_SET_CATALOG1 = red["CHARACTER_SET_CATALOG"].ToString();
-				st.CHARACTER_SET_NAME1 = red["CHARACTER_SET_NAME"].ToString();
-				st.CHARACTER_SET_SCHEMA1 = red["CHARACTER_SET_SCHEMA"].ToString();
+				//st.CHARACTER_OCTET_LENGTH1 = red["CHARACTER_OCTET_LENGTH"].ToString();
+				//st.CHARACTER_SET_CATALOG1 = red["CHARACTER_SET_CATALOG"].ToString();
+				//st.CHARACTER_SET_NAME1 = red["CHARACTER_SET_NAME"].ToString();
+				//st.CHARACTER_SET_SCHEMA1 = red["CHARACTER_SET_SCHEMA"].ToString();
 				st.IS_NULLABLE1 = red["IS_NULLABLE"].ToString();
 				//st.NUMERIC_PRECISION_RADIX1 = red["NUMERIC_PRECISION_RADIX"].ToString();
 				st.NUMERIC_PRECISION1 = red["NUMERIC_PRECISION"].ToString();
@@ -324,26 +324,26 @@ namespace Databazovy_Synchronizator
 			}
 			red.Close();
 		}
-		private void nacitajPKPreTab(Tablee tab)
-		{
-			SqlCommand com = pripojenie.CreateCommand();
-			com.CommandText = "SELECT cu.CONSTRAINT_NAME, cu.COLUMN_NAME FROM INFORMATION_SCHEMA.KEY_COLUMN_USAGE cu WHERE EXISTS ( SELECT tc.* FROM INFORMATION_SCHEMA.TABLE_CONSTRAINTS tc WHERE tc.CONSTRAINT_CATALOG = '" + NazovDB + "' AND tc.TABLE_NAME = '" + tab.NazovTabulky + "' AND tc.CONSTRAINT_TYPE = 'PRIMARY KEY' AND tc.CONSTRAINT_NAME = cu.CONSTRAINT_NAME )";
-			SqlDataReader red = com.ExecuteReader();
-			while (red.Read())
-			{
-				string nazovPK = red["CONSTRAINT_NAME"].ToString();
-				string nazovStlpca = red["COLUMN_NAME"].ToString();
-				//najdem stlpec, ktory by mal byt primarnym klucom
-				foreach (Columnn s in tab.Stlpce)
-				{
-					if (s.COULUMN_NAME1 == nazovStlpca)
-					{
-						s.Name_of_PK = nazovPK;
-					}
-				}
-			}
-			red.Close();
-		}
+        //private void nacitajPKPreTab(Tablee tab)
+        //{
+        //    SqlCommand com = pripojenie.CreateCommand();
+        //    com.CommandText = "SELECT cu.CONSTRAINT_NAME, cu.COLUMN_NAME FROM INFORMATION_SCHEMA.KEY_COLUMN_USAGE cu WHERE EXISTS ( SELECT tc.* FROM INFORMATION_SCHEMA.TABLE_CONSTRAINTS tc WHERE tc.CONSTRAINT_CATALOG = '" + NazovDB + "' AND tc.TABLE_NAME = '" + tab.NazovTabulky + "' AND tc.CONSTRAINT_TYPE = 'PRIMARY KEY' AND tc.CONSTRAINT_NAME = cu.CONSTRAINT_NAME )";
+        //    SqlDataReader red = com.ExecuteReader();
+        //    while (red.Read())
+        //    {
+        //        string nazovPK = red["CONSTRAINT_NAME"].ToString();
+        //        string nazovStlpca = red["COLUMN_NAME"].ToString();
+        //        //najdem stlpec, ktory by mal byt primarnym klucom
+        //        foreach (Columnn s in tab.Stlpce)
+        //        {
+        //            if (s.COULUMN_NAME1 == nazovStlpca)
+        //            {
+        //                s.Name_of_PK = nazovPK;
+        //            }
+        //        }
+        //    }
+        //    red.Close();
+        //}
 		private void nacitajPKPreTabNew(Tablee tab)
 		{
 			SqlCommand com = pripojenie.CreateCommand();
@@ -408,32 +408,32 @@ namespace Databazovy_Synchronizator
 			}
 			red.Close();
 		}
-		private void nacitajFKPreTab(Tablee tab)
-		{
-			SqlCommand prikaz = pripojenie.CreateCommand();
-			prikaz.CommandType = CommandType.StoredProcedure;
-			prikaz.CommandText = "dbo.sp_fkeys";
-			prikaz.Parameters.Add("@fktable_name", SqlDbType.NVarChar, 128);
-			prikaz.Parameters["@fktable_name"].Value = tab.NazovTabulky;
-			SqlDataReader red = prikaz.ExecuteReader();
-			while (red.Read())
-			{
-				string FKcolumnName = red["FKCOLUMN_NAME"].ToString();
-				string PKTable = red["PKTABLE_NAME"].ToString();
-				string PKTableCol = red["PKCOLUMN_NAME"].ToString();
-				string FKName = red["FK_NAME"].ToString();
-				foreach (Columnn s in tab.Stlpce)
-				{
-					if (s.COULUMN_NAME1 == FKcolumnName)
-					{
-						s.Name_of_FK = FKName;
-						s.FK_nameOFPKTab = PKTable;
-						s.FK_NameOFPKCol = PKTableCol;
-					}
-				}
-			}
-			red.Close();
-		}
+        //private void nacitajFKPreTab(Tablee tab)
+        //{
+        //    SqlCommand prikaz = pripojenie.CreateCommand();
+        //    prikaz.CommandType = CommandType.StoredProcedure;
+        //    prikaz.CommandText = "dbo.sp_fkeys";
+        //    prikaz.Parameters.Add("@fktable_name", SqlDbType.NVarChar, 128);
+        //    prikaz.Parameters["@fktable_name"].Value = tab.NazovTabulky;
+        //    SqlDataReader red = prikaz.ExecuteReader();
+        //    while (red.Read())
+        //    {
+        //        string FKcolumnName = red["FKCOLUMN_NAME"].ToString();
+        //        string PKTable = red["PKTABLE_NAME"].ToString();
+        //        string PKTableCol = red["PKCOLUMN_NAME"].ToString();
+        //        string FKName = red["FK_NAME"].ToString();
+        //        foreach (Columnn s in tab.Stlpce)
+        //        {
+        //            if (s.COULUMN_NAME1 == FKcolumnName)
+        //            {
+        //                s.Name_of_FK = FKName;
+        //                s.FK_nameOFPKTab = PKTable;
+        //                s.FK_NameOFPKCol = PKTableCol;
+        //            }
+        //        }
+        //    }
+        //    red.Close();
+        //}
 
 		//nacitanie procedur
 		public override List<SProcedure> nacitajProcedury()
@@ -1007,12 +1007,12 @@ namespace Databazovy_Synchronizator
 			return output;
 		}
 
-		private string addPrimaryKey(Columnn col)
-		{
-			string output = "";
-			if (col.Is_primaryKey()) output = " PRIMARY KEY " ;
-			return output;
-		}
+        //private string addPrimaryKey(Columnn col)
+        //{
+        //    string output = "";
+        //    if (col.Is_primaryKey()) output = " PRIMARY KEY " ;
+        //    return output;
+        //}
 		
 		private string generateType(Columnn col)
 		{
