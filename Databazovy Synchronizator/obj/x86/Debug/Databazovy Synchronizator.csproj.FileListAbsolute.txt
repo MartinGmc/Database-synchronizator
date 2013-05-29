@@ -1,7 +1,4 @@
-D:\moje veci\skola\diplomka nova\Databazovy Synchronizator\Databazovy Synchronizator\obj\x86\Debug\ResolveAssemblyReference.cache
 D:\moje veci\skola\diplomka nova\Databazovy Synchronizator\Databazovy Synchronizator\obj\x86\Debug\Databazovy_Synchronizator.Properties.Resources.resources
-D:\moje veci\skola\diplomka nova\Databazovy Synchronizator\Databazovy Synchronizator\obj\x86\Debug\GenerateResource.read.1.tlog
-D:\moje veci\skola\diplomka nova\Databazovy Synchronizator\Databazovy Synchronizator\obj\x86\Debug\GenerateResource.write.1.tlog
 D:\moje veci\skola\diplomka nova\Databazovy Synchronizator\Databazovy Synchronizator\bin\Debug\Databazovy Synchronizator.exe
 D:\moje veci\skola\diplomka nova\Databazovy Synchronizator\Databazovy Synchronizator\bin\Debug\Databazovy Synchronizator.pdb
 D:\moje veci\skola\diplomka nova\Databazovy Synchronizator\Databazovy Synchronizator\obj\x86\Debug\Databazovy Synchronizator.exe
@@ -16,3 +13,7 @@ D:\moje veci\skola\diplomka nova\Databazovy Synchronizator\Databazovy Synchroniz
 D:\moje veci\skola\diplomka nova\Databazovy Synchronizator\Databazovy Synchronizator\bin\Debug\LineNumbers.xml
 D:\moje veci\skola\diplomka nova\Databazovy Synchronizator\Databazovy Synchronizator\obj\x86\Debug\Databazovy_Synchronizator.FrmSynchronize.resources
 D:\moje veci\skola\diplomka nova\Databazovy Synchronizator\Databazovy Synchronizator\obj\x86\Debug\Databazovy_Synchronizator.FrmSqlShow.resources
+D:\moje veci\skola\diplomka nova\Databazovy Synchronizator\Databazovy Synchronizator\obj\x86\Debug\Databazovy_Synchronizator.FrmSQLCode2.resources
+D:\moje veci\skola\diplomka nova\Databazovy Synchronizator\Databazovy Synchronizator\obj\x86\Debug\Databazovy_Synchronizator.SideBySideRichTextBox.resources
+d:\moje veci\skola\diplomka nova\Databazovy Synchronizator\Databazovy Synchronizator\obj\x86\Debug\Databazovy Synchronizator.csprojResolveAssemblyReference.cache
+d:\moje veci\skola\diplomka nova\Databazovy Synchronizator\Databazovy Synchronizator\obj\x86\Debug\Databazovy Synchronizator.csproj.GenerateResource.Cache

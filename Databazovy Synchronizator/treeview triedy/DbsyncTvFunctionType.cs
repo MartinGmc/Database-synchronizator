@@ -13,7 +13,7 @@ namespace Databazovy_Synchronizator
         {
             this.sf = sff;
             this.Text = sf.NazovFunkcie;
-            this.typIkony = FunctionIcon;
+            this.typeOfIcon = FunctionIcon;
             this.Name = this.Text;
         }
 

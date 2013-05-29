@@ -119,20 +119,20 @@ namespace Databazovy_Synchronizator
 
         private void buttonSQLTextClick(object sender, EventArgs e)
         {
-            FrmSqlCode ff;
+            FrmSQLCode2 ff;
             DBsyncTreeview n1 = (DBsyncTreeview) tvDb1.SelectedNode;
             DBsyncTreeview n2 = (DBsyncTreeview) tvDb2.SelectedNode;
             if (n1 != null && n2 != null)
             {
-                ff = new FrmSqlCode(n1.SqlTextList, n2.SqlTextList);
+                ff = new FrmSQLCode2(n1.SqlTextList.getText(), n2.SqlTextList.getText());
             }
             else if (n1 != null)
             {
-                ff = new FrmSqlCode(n1.SqlTextList, null);
+                ff = new FrmSQLCode2(n1.SqlTextList.getText(), null);
             }
             else 
             {
-                ff = new FrmSqlCode(null, n2.SqlTextList);
+                ff = new FrmSQLCode2(null, n2.SqlTextList.getText());
             }
             ff.Show();
         }

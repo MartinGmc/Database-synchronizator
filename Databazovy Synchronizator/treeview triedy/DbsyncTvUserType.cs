@@ -13,7 +13,7 @@ namespace Databazovy_Synchronizator
         {
             this.u = usr;
             this.Text = u.UserName;
-            this.typIkony = UserIcon;
+            this.typeOfIcon = UserIcon;
             this.Name = this.Text;
         }
         

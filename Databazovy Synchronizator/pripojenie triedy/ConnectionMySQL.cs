@@ -11,11 +11,11 @@ namespace Databazovy_Synchronizator
         public MySqlConnection pripojenie;
         public bool pripAktivne = false;
         private string connString;
-        public ConnectionMySQL(string commStringIn)
-        {
-            this.typPripojenia = "MySQL";
-            this.connString = commStringIn;
-        }
+        //public ConnectionMySQL(string commStringIn)
+        //{
+        //    this.typPripojenia = "MySQL";
+        //    this.connString = commStringIn;
+        //}
 
         public override bool createConnection()
         {
@@ -91,32 +91,32 @@ namespace Databazovy_Synchronizator
 
         */
 
-        public override string dajNazovDB()
+        public override string GetNameOfDB()
         {
             throw new NotImplementedException();
         }
 
-        public override List<SProcedure> nacitajProcedury()
+        public override List<SProcedure> ReadProcedures()
         {
             throw new NotImplementedException();
         }
 
-        public override List<SFunction> nacitajFunkcie()
+        public override List<SFunction> ReadFunctions()
         {
             throw new NotImplementedException();
         }
 
-        public override List<Typ> nacitajTypy()
+        public override List<Typ> ReadTypes()
         {
             throw new NotImplementedException();
         }
 
-        public override List<User> nacitajUSerov()
+        public override List<User> ReadUsers()
         {
             throw new NotImplementedException();
         }
 
-        public override List<Tablee> nacitajTabulky()
+        public override List<Tablee> ReadTables()
         {
             throw new NotImplementedException();
         }
@@ -208,12 +208,12 @@ namespace Databazovy_Synchronizator
             throw new NotImplementedException();
         }
 
-        public override List<string> alterTable(Tablee tabIn)
-        {
-            throw new NotImplementedException();
-        }
+        //public override List<string> alterTable(Tablee tabIn)
+        //{
+        //    throw new NotImplementedException();
+        //}
 
-        public override List<string> removeUSer(User usrIn)
+        public override List<string> removeUser(User usrIn)
         {
             throw new NotImplementedException();
         }

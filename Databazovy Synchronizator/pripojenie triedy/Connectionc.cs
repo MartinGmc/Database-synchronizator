@@ -8,18 +8,18 @@ namespace Databazovy_Synchronizator
 {
     public abstract class Connectionc
     {
-      public string typPripojenia;
+      //public string typPripojenia;
 
       public event EventHandler needsUpdateView;
 
       //functions to read data
       public abstract bool createConnection(); 
-      public abstract string dajNazovDB();
-      public abstract List<Tablee> nacitajTabulky();
-      public abstract List<SProcedure> nacitajProcedury();
-      public abstract List<SFunction> nacitajFunkcie();
-      public abstract List<Typ> nacitajTypy();
-      public abstract List<User> nacitajUSerov();
+      public abstract string GetNameOfDB();
+      public abstract List<Tablee> ReadTables();
+      public abstract List<SProcedure> ReadProcedures();
+      public abstract List<SFunction> ReadFunctions();
+      public abstract List<Typ> ReadTypes();
+      public abstract List<User> ReadUsers();
       
       //functions to generate scripts
       //scripts to create objects
@@ -35,7 +35,7 @@ namespace Databazovy_Synchronizator
       public abstract List<string> removeFunction(SFunction funkcIn);
       public abstract List<string> removeTable(Tablee tabIn);
       public abstract List<string> removeType(Typ typIn);
-      public abstract List<string> removeUSer(User usrIn);
+      public abstract List<string> removeUser(User usrIn);
       public abstract List<string> removeFKonTab(Tablee tab);
       public abstract List<string> removePrivilege(Privilege privIn);
 
@@ -60,7 +60,7 @@ namespace Databazovy_Synchronizator
       public abstract List<string> alterIndex(Tablee tabIn, Index indexIn);
       public abstract List<string> removeIndex(Tablee tabIn, Index indexIn);
       public abstract List<string> alterPrivilege(Privilege privIn);
-        public abstract List<string> alterTable(Tablee tabIn);
+      //  public abstract List<string> alterTable(Tablee tabIn);
 
       //function to execute scripts
       public abstract List<string> executeText(List<string> text);

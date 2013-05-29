@@ -9,7 +9,7 @@ namespace Databazovy_Synchronizator
     {
         public DBsyncTvEmptyType(string text, int IconType)
         {
-            this.typIkony = IconType;
+            this.typeOfIcon = IconType;
             this.Text = text;
             this.Name = this.Text;
         }

@@ -47,7 +47,7 @@
             this.sqlTextA.Location = new System.Drawing.Point(20, 0);
             this.sqlTextA.Name = "sqlTextA";
             this.sqlTextA.ReadOnly = true;
-            this.sqlTextA.Size = new System.Drawing.Size(207, 337);
+            this.sqlTextA.Size = new System.Drawing.Size(222, 342);
             this.sqlTextA.TabIndex = 0;
             this.sqlTextA.Text = "";
             // 
@@ -57,7 +57,7 @@
             this.sqlTextB.Location = new System.Drawing.Point(20, 0);
             this.sqlTextB.Name = "sqlTextB";
             this.sqlTextB.ReadOnly = true;
-            this.sqlTextB.Size = new System.Drawing.Size(231, 337);
+            this.sqlTextB.Size = new System.Drawing.Size(253, 342);
             this.sqlTextB.TabIndex = 1;
             this.sqlTextB.Text = "";
             // 
@@ -75,8 +75,8 @@
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.panel1);
-            this.splitContainer1.Size = new System.Drawing.Size(482, 337);
-            this.splitContainer1.SplitterDistance = 227;
+            this.splitContainer1.Size = new System.Drawing.Size(519, 342);
+            this.splitContainer1.SplitterDistance = 242;
             this.splitContainer1.TabIndex = 2;
             // 
             // lineNumbers_For_RichTextBox1
@@ -114,7 +114,7 @@
             this.lineNumbers_For_RichTextBox1.Show_GridLines = true;
             this.lineNumbers_For_RichTextBox1.Show_LineNrs = true;
             this.lineNumbers_For_RichTextBox1.Show_MarginLines = true;
-            this.lineNumbers_For_RichTextBox1.Size = new System.Drawing.Size(20, 337);
+            this.lineNumbers_For_RichTextBox1.Size = new System.Drawing.Size(20, 342);
             this.lineNumbers_For_RichTextBox1.TabIndex = 3;
             // 
             // panel1
@@ -124,7 +124,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(251, 337);
+            this.panel1.Size = new System.Drawing.Size(273, 342);
             this.panel1.TabIndex = 3;
             // 
             // lineNumbers_For_RichTextBox2
@@ -162,14 +162,14 @@
             this.lineNumbers_For_RichTextBox2.Show_GridLines = true;
             this.lineNumbers_For_RichTextBox2.Show_LineNrs = true;
             this.lineNumbers_For_RichTextBox2.Show_MarginLines = true;
-            this.lineNumbers_For_RichTextBox2.Size = new System.Drawing.Size(20, 337);
+            this.lineNumbers_For_RichTextBox2.Size = new System.Drawing.Size(20, 342);
             this.lineNumbers_For_RichTextBox2.TabIndex = 2;
             // 
             // FrmSqlCode
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(482, 337);
+            this.ClientSize = new System.Drawing.Size(519, 342);
             this.Controls.Add(this.splitContainer1);
             this.Name = "FrmSqlCode";
             this.Text = "Comarison of SQL code";

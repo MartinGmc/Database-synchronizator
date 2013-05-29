@@ -74,12 +74,12 @@ namespace Databazovy_Synchronizator
             {
                 if (prip.createConnection())
                 {
-                    tabulky = prip.nacitajTabulky();
-                    procedury = prip.nacitajProcedury();
-                    funkcie = prip.nacitajFunkcie();
-                    typy = prip.nacitajTypy();
-                    usery = prip.nacitajUSerov();
-                    nameOfDatabase = prip.dajNazovDB();
+                    tabulky = prip.ReadTables();
+                    procedury = prip.ReadProcedures();
+                    funkcie = prip.ReadFunctions();
+                    typy = prip.ReadTypes();
+                    usery = prip.ReadUsers();
+                    nameOfDatabase = prip.GetNameOfDB();
                     pripAktivne = true;
                     return true;
                 }
@@ -94,12 +94,12 @@ namespace Databazovy_Synchronizator
             prip = sqlPrip;
             if (sqlPrip.createConnection())
             {
-                tabulky = sqlPrip.nacitajTabulky();
-                procedury = sqlPrip.nacitajProcedury();
-                funkcie = sqlPrip.nacitajFunkcie();
-                typy = sqlPrip.nacitajTypy();
-                usery = sqlPrip.nacitajUSerov();
-                nameOfDatabase = sqlPrip.dajNazovDB();
+                tabulky = sqlPrip.ReadTables();
+                procedury = sqlPrip.ReadProcedures();
+                funkcie = sqlPrip.ReadFunctions();
+                typy = sqlPrip.ReadTypes();
+                usery = sqlPrip.ReadUsers();
+                nameOfDatabase = sqlPrip.GetNameOfDB();
                 pripAktivne = true;
                 return true;
             }
@@ -109,8 +109,8 @@ namespace Databazovy_Synchronizator
 
         public bool vytvorMySQLpripojenie(string connstring)
         {
-            ConnectionMySQL sqlPrip = new ConnectionMySQL(connstring);
-            prip = sqlPrip;
+            //ConnectionMySQL sqlPrip = new ConnectionMySQL(connstring);
+            //prip = sqlPrip;
            /* if (tabulky != null)
             {
                 tabulky = sqlPrip.createConnection();

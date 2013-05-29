@@ -13,7 +13,7 @@ namespace Databazovy_Synchronizator
         {
             this.priv = pr;
             this.Text = pr.Grantee;
-            this.typIkony = GrantIcon;
+            this.typeOfIcon = GrantIcon;
             this.Name = this.Text;
         }
         

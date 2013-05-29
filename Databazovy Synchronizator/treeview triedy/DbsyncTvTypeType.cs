@@ -13,7 +13,7 @@ namespace Databazovy_Synchronizator
         {
             this.t = tt;
             this.Text = t.Nazov;
-            this.typIkony = TypeIcon;
+            this.typeOfIcon = TypeIcon;
             this.Name = this.Text;
         }
 

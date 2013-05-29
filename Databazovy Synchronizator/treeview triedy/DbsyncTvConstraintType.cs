@@ -13,7 +13,7 @@ namespace Databazovy_Synchronizator
         {
             this.constr = cs;
             this.Text = cs.Constraint_nam;
-            this.typIkony = ConstraintIcon;
+            this.typeOfIcon = ConstraintIcon;
             this.Name = this.Text;
             
         }

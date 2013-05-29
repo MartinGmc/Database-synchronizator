@@ -33,13 +33,13 @@ namespace Databazovy_Synchronizator
             if (k.PrimaryKey)
             {
                 this.Text = k.NameOfKey;
-                this.typIkony = PrimaryKeyIcon;
+                this.typeOfIcon = PrimaryKeyIcon;
                 this.Name = this.Text;
             }
             else
             {
                 this.Text = k.NameOfKey;
-                this.typIkony = ForeinKeyIcon;
+                this.typeOfIcon = ForeinKeyIcon;
                 this.Name = this.Text;
             }
         }

@@ -11,8 +11,8 @@ namespace Databazovy_Synchronizator
        
 
        
-        protected int typIkony;
-        private bool Zvyraznene;
+        protected int typeOfIcon;
+        private bool Higlited;
         private List<ObjectAtribute> objectAtributesList;
         private SqlTextHighlited sqlTextList;
 
@@ -31,8 +31,8 @@ namespace Databazovy_Synchronizator
         
         public bool Azvyraznene
         {
-            get { return Zvyraznene; }
-            set { Zvyraznene = value; }
+            get { return Higlited; }
+            set { Higlited = value; }
         }
 
         public abstract override string ToString();
@@ -42,7 +42,7 @@ namespace Databazovy_Synchronizator
 
         public int getTypIkony()
         {
-            return typIkony;
+            return typeOfIcon;
         }
 
         public const int DatabaseIcon = 0,

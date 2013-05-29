@@ -24,7 +24,7 @@ namespace Databazovy_Synchronizator
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (cbDatabaza.SelectedItem != null)
+          /*  if (cbDatabaza.SelectedItem != null)
             {
                 if (cbDatabaza.SelectedItem.ToString() == "MSSQL")
                 {
@@ -59,7 +59,7 @@ namespace Databazovy_Synchronizator
             else
             {
                 MessageBox.Show("chyba, musite zvolit typ databazy");
-            }
+            }*/
         }
 
        
@@ -68,8 +68,13 @@ namespace Databazovy_Synchronizator
         {
             if (cbDatabaza.SelectedItem.ToString() == "MSSQL")
             {
-                ConnectionMSSQL con1 = new ConnectionMSSQL(textBox1.Text);
-                ConnectionMSSQL con2 = new ConnectionMSSQL(textBox2.Text);
+                string text1 = "";
+                string text2 = "";
+
+                text1 = "server="+db1Server.Text+";database="+db1Name.Text+";uid="+db1Username.Text+";pwd="+db1Pass.Text+";MultipleActiveResultSets=True;";
+                text2 = "server=" + db2Server.Text + ";database=" + db2Name.Text + ";uid=" + db2Username.Text + ";pwd=" + db2Pass.Text + ";MultipleActiveResultSets=True;";
+                ConnectionMSSQL con1 = new ConnectionMSSQL(text1);
+                ConnectionMSSQL con2 = new ConnectionMSSQL(text2);
                 if (com.createConnections(con1, con2))
                 {
                     MessageBox.Show("Connection succesfull");
@@ -87,6 +92,21 @@ namespace Databazovy_Synchronizator
             }
             
             
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void db1Pass_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void db2Pass_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -14,7 +14,7 @@ namespace Databazovy_Synchronizator
             
             this.sp = spp;
             this.Text = spp.NazovProcedury;
-            this.typIkony = StoredProcedureIcon;
+            this.typeOfIcon = StoredProcedureIcon;
             this.Name = this.Text;
 
         }

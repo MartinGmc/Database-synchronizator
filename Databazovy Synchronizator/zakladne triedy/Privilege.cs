@@ -7,17 +7,20 @@ namespace Databazovy_Synchronizator
 {
     public class Privilege : IDbsyncCompare<Privilege>
     {
-        //private string grantor;
         private string grantee;
-        //private string table_catalog;
-        // private string table_schema;
         private string table_name;
         private string privilege_type;
-       // private bool is_grantable;
+        private List<string> privilege_type_list;
 
+        #region temporary disabled properties
+        //private string grantor;
+        //private string table_catalog;
+        // private string table_schema;
+        // private bool is_grantable;
+        #endregion
 
-
-
+        #region Outside visible methods
+        #region get+Set encapsulation
         public string Grantee
         {
             get { return grantee; }
@@ -33,9 +36,42 @@ namespace Databazovy_Synchronizator
             get { return privilege_type; }
             set { privilege_type = value; }
         }
+        public List<string> Privitege_type_list
+        {
+            get { return privilege_type_list; }
+        }
+        #endregion
+
+        #region methods
+        public bool addPriviege(string priv)
+        {
+            bool found = false;
+            foreach (string s in privilege_type_list)
+            {
+                if (s.Equals(privilege_type))
+                {
+                    found = true;
+                }
+            }
+            
+            if (!found)
+            {
+                privilege_type_list.Add(priv);
+            }
+
+            return false;
+        }
+
+        
+        public string getName()
+        {
+            return this.grantee + " " + this.privilege_type;
+        }
+        #endregion
+
+        #endregion
 
 
-       
 
         public bool DBSyncCompareTO(Privilege priv)
         {
@@ -48,9 +84,6 @@ namespace Databazovy_Synchronizator
 
         }
 
-        public string getName()
-        {
-            return this.grantee + " " + this.privilege_type;
-        }
+        
     }
 }

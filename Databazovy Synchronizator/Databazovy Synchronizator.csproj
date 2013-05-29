@@ -69,10 +69,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ColVal.cs" />
+    <Compile Include="FrmSQLCode2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmSQLCode2.Designer.cs">
+      <DependentUpon>FrmSQLCode2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="pomocne triedy\ColVal.cs" />
     <Compile Include="Comparator.cs" />
-    <Compile Include="ComparatorOfSQL.cs" />
-    <Compile Include="ComparatorSettings.cs" />
+    <Compile Include="pomocne triedy\ComparatorOfSQL.cs" />
+    <Compile Include="pomocne triedy\ComparatorSettings.cs" />
     <Compile Include="FrmSqlCode.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -91,7 +97,19 @@
     <Compile Include="FrmSynchronize.Designer.cs">
       <DependentUpon>FrmSynchronize.cs</DependentUpon>
     </Compile>
-    <Compile Include="SqlTextHighlited.cs" />
+    <Compile Include="pomocne triedy\SqlTextHighlited.cs" />
+    <Compile Include="sideBysideTextBox\Engine.cs" />
+    <Compile Include="sideBysideTextBox\SideBySideRichTextBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="sideBysideTextBox\SideBySideRichTextBox.Designer.cs">
+      <DependentUpon>SideBySideRichTextBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="sideBysideTextBox\StringTokenizer.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="sideBysideTextBox\Structures.cs" />
+    <Compile Include="sideBysideTextBox\TextFile.cs" />
     <Compile Include="zakladne triedy\Constraintt.cs" />
     <Compile Include="zakladne triedy\DataBasee.cs" />
     <Compile Include="diff triedy\DbSyncColumnDiff.cs" />
@@ -134,10 +152,9 @@
     <Compile Include="zakladne triedy\IDbsyncCompare.cs" />
     <Compile Include="zakladne triedy\Index.cs" />
     <Compile Include="zakladne triedy\Key.cs" />
-    <Compile Include="zakladne triedy\ObjectAtribute.cs" />
+    <Compile Include="pomocne triedy\ObjectAtribute.cs" />
     <Compile Include="pripojenie triedy\Connectionc.cs" />
     <Compile Include="pripojenie triedy\ConnectionMSSQL.cs" />
-    <Compile Include="pripojenie triedy\ConnectionMySQL.cs" />
     <Compile Include="zakladne triedy\Privilege.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -157,6 +174,9 @@
     <EmbeddedResource Include="FrmConnection.resx">
       <DependentUpon>FrmConnection.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmSQLCode2.resx">
+      <DependentUpon>FrmSQLCode2.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmSqlShow.resx">
       <DependentUpon>FrmSqlShow.cs</DependentUpon>
     </EmbeddedResource>
@@ -172,8 +192,10 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="sideBysideTextBox\SideBySideRichTextBox.resx">
+      <DependentUpon>SideBySideRichTextBox.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="ClassDiagram1.cd" />
-    <None Include="ClassDiagram2.cd" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

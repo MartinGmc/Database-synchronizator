@@ -19,7 +19,7 @@ namespace Databazovy_Synchronizator
         {
             this.s = stl;
             this.Text = s.COULUMN_NAME1;
-            this.typIkony = ColumnIcon;
+            this.typeOfIcon = ColumnIcon;
             this.Name = this.Text;
         }
 

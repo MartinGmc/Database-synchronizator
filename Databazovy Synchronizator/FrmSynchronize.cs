@@ -28,10 +28,13 @@ namespace Databazovy_Synchronizator
         private void readTables()
         {
             lbTables.Items.Clear();
-            foreach (DbSyncTableDiff tab in comp.DatabaseDifferences.getTablediff())
+            if (comp.DatabaseDifferences != null)
             {
-               
-                lbTables.Items.Add(tab);
+                foreach (DbSyncTableDiff tab in comp.DatabaseDifferences.getTablediff())
+                {
+
+                    lbTables.Items.Add(tab);
+                }
             }
         }
         

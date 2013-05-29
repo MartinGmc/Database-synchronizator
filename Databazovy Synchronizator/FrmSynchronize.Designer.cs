@@ -42,8 +42,6 @@
             this.rbDb2 = new System.Windows.Forms.RadioButton();
             this.rbDb1 = new System.Windows.Forms.RadioButton();
             this.tabSchema = new System.Windows.Forms.TabPage();
-            this.progressBar1 = new System.Windows.Forms.ProgressBar();
-            this.btnExecuteScripts = new System.Windows.Forms.Button();
             this.btnDb2Scripts = new System.Windows.Forms.Button();
             this.btnDb1Scripts = new System.Windows.Forms.Button();
             this.btnGenerate = new System.Windows.Forms.Button();
@@ -214,8 +212,6 @@
             // 
             // tabSchema
             // 
-            this.tabSchema.Controls.Add(this.progressBar1);
-            this.tabSchema.Controls.Add(this.btnExecuteScripts);
             this.tabSchema.Controls.Add(this.btnDb2Scripts);
             this.tabSchema.Controls.Add(this.btnDb1Scripts);
             this.tabSchema.Controls.Add(this.btnGenerate);
@@ -230,25 +226,9 @@
             this.tabSchema.Text = "SchemaSynchronization";
             this.tabSchema.UseVisualStyleBackColor = true;
             // 
-            // progressBar1
-            // 
-            this.progressBar1.Location = new System.Drawing.Point(301, 230);
-            this.progressBar1.Name = "progressBar1";
-            this.progressBar1.Size = new System.Drawing.Size(362, 23);
-            this.progressBar1.TabIndex = 7;
-            // 
-            // btnExecuteScripts
-            // 
-            this.btnExecuteScripts.Location = new System.Drawing.Point(588, 150);
-            this.btnExecuteScripts.Name = "btnExecuteScripts";
-            this.btnExecuteScripts.Size = new System.Drawing.Size(75, 39);
-            this.btnExecuteScripts.TabIndex = 6;
-            this.btnExecuteScripts.Text = "Execute scripts";
-            this.btnExecuteScripts.UseVisualStyleBackColor = true;
-            // 
             // btnDb2Scripts
             // 
-            this.btnDb2Scripts.Location = new System.Drawing.Point(481, 150);
+            this.btnDb2Scripts.Location = new System.Drawing.Point(587, 224);
             this.btnDb2Scripts.Name = "btnDb2Scripts";
             this.btnDb2Scripts.Size = new System.Drawing.Size(75, 39);
             this.btnDb2Scripts.TabIndex = 5;
@@ -258,7 +238,7 @@
             // 
             // btnDb1Scripts
             // 
-            this.btnDb1Scripts.Location = new System.Drawing.Point(400, 150);
+            this.btnDb1Scripts.Location = new System.Drawing.Point(506, 224);
             this.btnDb1Scripts.Name = "btnDb1Scripts";
             this.btnDb1Scripts.Size = new System.Drawing.Size(75, 39);
             this.btnDb1Scripts.TabIndex = 4;
@@ -268,7 +248,7 @@
             // 
             // btnGenerate
             // 
-            this.btnGenerate.Location = new System.Drawing.Point(301, 150);
+            this.btnGenerate.Location = new System.Drawing.Point(301, 224);
             this.btnGenerate.Name = "btnGenerate";
             this.btnGenerate.Size = new System.Drawing.Size(75, 39);
             this.btnGenerate.TabIndex = 3;
@@ -290,7 +270,7 @@
             this.tbStatusOut.Location = new System.Drawing.Point(301, 21);
             this.tbStatusOut.Multiline = true;
             this.tbStatusOut.Name = "tbStatusOut";
-            this.tbStatusOut.Size = new System.Drawing.Size(362, 122);
+            this.tbStatusOut.Size = new System.Drawing.Size(362, 197);
             this.tbStatusOut.TabIndex = 1;
             // 
             // groupBox3
@@ -510,8 +490,6 @@
         private System.Windows.Forms.CheckBox cbProcedures;
         private System.Windows.Forms.CheckBox cbTables;
         private System.Windows.Forms.CheckBox cbAll;
-        private System.Windows.Forms.ProgressBar progressBar1;
-        private System.Windows.Forms.Button btnExecuteScripts;
         private System.Windows.Forms.Button btnDb2Scripts;
         private System.Windows.Forms.Button btnDb1Scripts;
         private System.Windows.Forms.Button btnGenerate;

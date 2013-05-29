@@ -13,7 +13,7 @@ namespace Databazovy_Synchronizator
         {
             this.trig = trg;
             this.Text = trg.Trigger_name;
-            this.typIkony = TriggerIcon;
+            this.typeOfIcon = TriggerIcon;
             this.Name = this.Text;
         }
 

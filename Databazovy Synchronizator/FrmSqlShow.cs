@@ -19,10 +19,13 @@ namespace Databazovy_Synchronizator
             InitializeComponent();
             this.datab = dat;
             this.sqlCommands = sqlText;
-            foreach (string s in sqlText)
+            if (dat != null && sqlText != null)
             {
-                this.richTextBox1.AppendText(s);
-                this.richTextBox1.AppendText(Environment.NewLine + " GO "+ Environment.NewLine);
+                foreach (string s in sqlText)
+                {
+                    this.richTextBox1.AppendText(s);
+                    this.richTextBox1.AppendText(Environment.NewLine + " GO " + Environment.NewLine);
+                }
             }
             
         }

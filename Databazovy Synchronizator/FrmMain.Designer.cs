@@ -106,7 +106,7 @@
             // 
             this.tvDb2.ImageIndex = 0;
             this.tvDb2.ImageList = this.imageList1;
-            this.tvDb2.Location = new System.Drawing.Point(302, 41);
+            this.tvDb2.Location = new System.Drawing.Point(578, 41);
             this.tvDb2.Name = "tvDb2";
             this.tvDb2.SelectedImageIndex = 0;
             this.tvDb2.Size = new System.Drawing.Size(284, 330);
@@ -116,9 +116,9 @@
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.lvExDb1);
-            this.groupBox1.Location = new System.Drawing.Point(592, 41);
+            this.groupBox1.Location = new System.Drawing.Point(284, 41);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(245, 330);
+            this.groupBox1.Size = new System.Drawing.Size(266, 330);
             this.groupBox1.TabIndex = 5;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "DB1 Properties";
@@ -128,11 +128,12 @@
             this.lvExDb1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader3,
             this.columnHeader4});
+            this.lvExDb1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lvExDb1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lvExDb1.GridLines = true;
-            this.lvExDb1.Location = new System.Drawing.Point(6, 19);
+            this.lvExDb1.Location = new System.Drawing.Point(3, 16);
             this.lvExDb1.Name = "lvExDb1";
-            this.lvExDb1.Size = new System.Drawing.Size(233, 305);
+            this.lvExDb1.Size = new System.Drawing.Size(260, 311);
             this.lvExDb1.TabIndex = 9;
             this.lvExDb1.TileSize = new System.Drawing.Size(2, 20);
             this.lvExDb1.UseCompatibleStateImageBehavior = false;
@@ -142,19 +143,19 @@
             // columnHeader3
             // 
             this.columnHeader3.Text = "Atribute";
-            this.columnHeader3.Width = 88;
+            this.columnHeader3.Width = 123;
             // 
             // columnHeader4
             // 
             this.columnHeader4.Text = "Value";
-            this.columnHeader4.Width = 140;
+            this.columnHeader4.Width = 128;
             // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.lvExDb2);
-            this.groupBox2.Location = new System.Drawing.Point(843, 41);
+            this.groupBox2.Location = new System.Drawing.Point(868, 41);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(257, 330);
+            this.groupBox2.Size = new System.Drawing.Size(284, 330);
             this.groupBox2.TabIndex = 6;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "DB2 properties";
@@ -164,11 +165,12 @@
             this.lvExDb2.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader5,
             this.columnHeader6});
+            this.lvExDb2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lvExDb2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lvExDb2.GridLines = true;
-            this.lvExDb2.Location = new System.Drawing.Point(6, 19);
+            this.lvExDb2.Location = new System.Drawing.Point(3, 16);
             this.lvExDb2.Name = "lvExDb2";
-            this.lvExDb2.Size = new System.Drawing.Size(239, 305);
+            this.lvExDb2.Size = new System.Drawing.Size(278, 311);
             this.lvExDb2.TabIndex = 11;
             this.lvExDb2.TileSize = new System.Drawing.Size(2, 20);
             this.lvExDb2.UseCompatibleStateImageBehavior = false;
@@ -177,12 +179,12 @@
             // columnHeader5
             // 
             this.columnHeader5.Text = "Atribute";
-            this.columnHeader5.Width = 88;
+            this.columnHeader5.Width = 130;
             // 
             // columnHeader6
             // 
             this.columnHeader6.Text = "Value";
-            this.columnHeader6.Width = 140;
+            this.columnHeader6.Width = 141;
             // 
             // cmTvDB1
             // 
@@ -211,13 +213,13 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1194, 446);
-            this.Controls.Add(this.groupBox1);
+            this.ClientSize = new System.Drawing.Size(1187, 417);
             this.Controls.Add(this.button5);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.tvDb2);
             this.Controls.Add(this.tvDb1);
-            this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.button1);
+            this.Controls.Add(this.groupBox2);
             this.Name = "MainFrm";
             this.Text = "Database synchronizator";
             this.groupBox1.ResumeLayout(false);
